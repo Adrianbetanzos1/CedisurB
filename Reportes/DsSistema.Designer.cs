@@ -314,8 +314,6 @@ namespace CedisurB.Reportes {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DT_MostrarFacturasActualizadaDataTable : global::System.Data.TypedTableBase<DT_MostrarFacturasActualizadaRow> {
             
-            private global::System.Data.DataColumn columnID_factura;
-            
             private global::System.Data.DataColumn columnFacturaN;
             
             private global::System.Data.DataColumn columnfechaFactura;
@@ -332,11 +330,11 @@ namespace CedisurB.Reportes {
             
             private global::System.Data.DataColumn columnsaldoUSD;
             
-            private global::System.Data.DataColumn columnID_proveedor;
-            
             private global::System.Data.DataColumn columnTipoDeCambio;
             
             private global::System.Data.DataColumn columnimporteUSD1;
+            
+            private global::System.Data.DataColumn columnnombreProveedor;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -369,14 +367,6 @@ namespace CedisurB.Reportes {
             protected DT_MostrarFacturasActualizadaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ID_facturaColumn {
-                get {
-                    return this.columnID_factura;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -445,14 +435,6 @@ namespace CedisurB.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ID_proveedorColumn {
-                get {
-                    return this.columnID_proveedor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn TipoDeCambioColumn {
                 get {
                     return this.columnTipoDeCambio;
@@ -464,6 +446,14 @@ namespace CedisurB.Reportes {
             public global::System.Data.DataColumn importeUSD1Column {
                 get {
                     return this.columnimporteUSD1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn nombreProveedorColumn {
+                get {
+                    return this.columnnombreProveedor;
                 }
             }
             
@@ -504,10 +494,9 @@ namespace CedisurB.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DT_MostrarFacturasActualizadaRow AddDT_MostrarFacturasActualizadaRow(string FacturaN, System.DateTime fechaFactura, int diasVencimiento, float importeMXP, string importeUSD, float abono, float saldoMXP, float saldoUSD, int ID_proveedor, float TipoDeCambio, float importeUSD1) {
+            public DT_MostrarFacturasActualizadaRow AddDT_MostrarFacturasActualizadaRow(string FacturaN, System.DateTime fechaFactura, int diasVencimiento, float importeMXP, string importeUSD, float abono, float saldoMXP, float saldoUSD, float TipoDeCambio, float importeUSD1, string nombreProveedor) {
                 DT_MostrarFacturasActualizadaRow rowDT_MostrarFacturasActualizadaRow = ((DT_MostrarFacturasActualizadaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         FacturaN,
                         fechaFactura,
                         diasVencimiento,
@@ -516,19 +505,12 @@ namespace CedisurB.Reportes {
                         abono,
                         saldoMXP,
                         saldoUSD,
-                        ID_proveedor,
                         TipoDeCambio,
-                        importeUSD1};
+                        importeUSD1,
+                        nombreProveedor};
                 rowDT_MostrarFacturasActualizadaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDT_MostrarFacturasActualizadaRow);
                 return rowDT_MostrarFacturasActualizadaRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DT_MostrarFacturasActualizadaRow FindByID_factura(int ID_factura) {
-                return ((DT_MostrarFacturasActualizadaRow)(this.Rows.Find(new object[] {
-                            ID_factura})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -548,7 +530,6 @@ namespace CedisurB.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnID_factura = base.Columns["ID_factura"];
                 this.columnFacturaN = base.Columns["FacturaN"];
                 this.columnfechaFactura = base.Columns["fechaFactura"];
                 this.columndiasVencimiento = base.Columns["diasVencimiento"];
@@ -557,16 +538,14 @@ namespace CedisurB.Reportes {
                 this.columnabono = base.Columns["abono"];
                 this.columnsaldoMXP = base.Columns["saldoMXP"];
                 this.columnsaldoUSD = base.Columns["saldoUSD"];
-                this.columnID_proveedor = base.Columns["ID_proveedor"];
                 this.columnTipoDeCambio = base.Columns["TipoDeCambio"];
                 this.columnimporteUSD1 = base.Columns["importeUSD1"];
+                this.columnnombreProveedor = base.Columns["nombreProveedor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_factura = new global::System.Data.DataColumn("ID_factura", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_factura);
                 this.columnFacturaN = new global::System.Data.DataColumn("FacturaN", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFacturaN);
                 this.columnfechaFactura = new global::System.Data.DataColumn("fechaFactura", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
@@ -583,20 +562,12 @@ namespace CedisurB.Reportes {
                 base.Columns.Add(this.columnsaldoMXP);
                 this.columnsaldoUSD = new global::System.Data.DataColumn("saldoUSD", typeof(float), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsaldoUSD);
-                this.columnID_proveedor = new global::System.Data.DataColumn("ID_proveedor", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_proveedor);
                 this.columnTipoDeCambio = new global::System.Data.DataColumn("TipoDeCambio", typeof(float), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTipoDeCambio);
                 this.columnimporteUSD1 = new global::System.Data.DataColumn("importeUSD1", typeof(float), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnimporteUSD1);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_factura}, true));
-                this.columnID_factura.AutoIncrement = true;
-                this.columnID_factura.AutoIncrementSeed = -1;
-                this.columnID_factura.AutoIncrementStep = -1;
-                this.columnID_factura.AllowDBNull = false;
-                this.columnID_factura.ReadOnly = true;
-                this.columnID_factura.Unique = true;
+                this.columnnombreProveedor = new global::System.Data.DataColumn("nombreProveedor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombreProveedor);
                 this.columnFacturaN.AllowDBNull = false;
                 this.columnFacturaN.MaxLength = 50;
                 this.columnfechaFactura.AllowDBNull = false;
@@ -607,10 +578,11 @@ namespace CedisurB.Reportes {
                 this.columnabono.AllowDBNull = false;
                 this.columnsaldoMXP.AllowDBNull = false;
                 this.columnsaldoUSD.AllowDBNull = false;
-                this.columnID_proveedor.AllowDBNull = false;
                 this.columnTipoDeCambio.AllowDBNull = false;
                 this.columnimporteUSD1.AllowDBNull = false;
                 this.columnimporteUSD1.Caption = "importeUSD";
+                this.columnnombreProveedor.AllowDBNull = false;
+                this.columnnombreProveedor.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1138,17 +1110,6 @@ namespace CedisurB.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ID_factura {
-                get {
-                    return ((int)(this[this.tableDT_MostrarFacturasActualizada.ID_facturaColumn]));
-                }
-                set {
-                    this[this.tableDT_MostrarFacturasActualizada.ID_facturaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string FacturaN {
                 get {
                     return ((string)(this[this.tableDT_MostrarFacturasActualizada.FacturaNColumn]));
@@ -1237,17 +1198,6 @@ namespace CedisurB.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ID_proveedor {
-                get {
-                    return ((int)(this[this.tableDT_MostrarFacturasActualizada.ID_proveedorColumn]));
-                }
-                set {
-                    this[this.tableDT_MostrarFacturasActualizada.ID_proveedorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public float TipoDeCambio {
                 get {
                     return ((float)(this[this.tableDT_MostrarFacturasActualizada.TipoDeCambioColumn]));
@@ -1265,6 +1215,17 @@ namespace CedisurB.Reportes {
                 }
                 set {
                     this[this.tableDT_MostrarFacturasActualizada.importeUSD1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string nombreProveedor {
+                get {
+                    return ((string)(this[this.tableDT_MostrarFacturasActualizada.nombreProveedorColumn]));
+                }
+                set {
+                    this[this.tableDT_MostrarFacturasActualizada.nombreProveedorColumn] = value;
                 }
             }
         }
@@ -1587,7 +1548,6 @@ namespace CedisurB.Reportes.DsSistemaTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DT_MostrarFacturasActualizada";
-            tableMapping.ColumnMappings.Add("ID_factura", "ID_factura");
             tableMapping.ColumnMappings.Add("FacturaN", "FacturaN");
             tableMapping.ColumnMappings.Add("fechaFactura", "fechaFactura");
             tableMapping.ColumnMappings.Add("diasVencimiento", "diasVencimiento");
@@ -1595,9 +1555,9 @@ namespace CedisurB.Reportes.DsSistemaTableAdapters {
             tableMapping.ColumnMappings.Add("abono", "abono");
             tableMapping.ColumnMappings.Add("saldoMXP", "saldoMXP");
             tableMapping.ColumnMappings.Add("saldoUSD", "saldoUSD");
-            tableMapping.ColumnMappings.Add("ID_proveedor", "ID_proveedor");
             tableMapping.ColumnMappings.Add("TipoDeCambio", "TipoDeCambio");
             tableMapping.ColumnMappings.Add("importeUSD", "importeUSD1");
+            tableMapping.ColumnMappings.Add("nombreProveedor", "nombreProveedor");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1614,7 +1574,7 @@ namespace CedisurB.Reportes.DsSistemaTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.DT_MostrarFacturasActualizada";
+            this._commandCollection[0].CommandText = "dbo.DT_MostrarFacturasB";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

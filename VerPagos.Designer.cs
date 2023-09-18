@@ -124,7 +124,7 @@
             this.DGVpagos.ReadOnly = true;
             this.DGVpagos.RowHeadersVisible = false;
             this.DGVpagos.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             this.DGVpagos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVpagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVpagos.Size = new System.Drawing.Size(1178, 392);

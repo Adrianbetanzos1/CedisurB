@@ -17,10 +17,6 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="ID_factura">
-          <DataField>ID_factura</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="FacturaN">
           <DataField>FacturaN</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -53,13 +49,17 @@
           <DataField>saldoUSD</DataField>
           <rd:TypeName>System.Single</rd:TypeName>
         </Field>
-        <Field Name="ID_proveedor">
-          <DataField>ID_proveedor</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
         <Field Name="TipoDeCambio">
           <DataField>TipoDeCambio</DataField>
           <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="importeUSD1">
+          <DataField>importeUSD</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="nombreProveedor">
+          <DataField>nombreProveedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
@@ -337,7 +337,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>ID del proveedor</Value>
+                                  <Value>Nombre del proveedor</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -614,21 +614,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="ID_proveedor">
+                        <Textbox Name="nombreProveedor">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!ID_proveedor.Value</Value>
+                                  <Value>=Fields!nombreProveedor.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>ID_proveedor</rd:DefaultName>
+                          <rd:DefaultName>nombreProveedor</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>

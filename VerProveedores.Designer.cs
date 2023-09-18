@@ -212,7 +212,7 @@
             this.DGVproveedores.ReadOnly = true;
             this.DGVproveedores.RowHeadersVisible = false;
             this.DGVproveedores.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             this.DGVproveedores.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVproveedores.Size = new System.Drawing.Size(1204, 464);
