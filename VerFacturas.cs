@@ -88,15 +88,15 @@ namespace CedisurB
                 {
                     ParentForm = this
                 };
-                pago.TxtIdFactura.Text = DGVfacturas.SelectedRows[0].Cells[0].Value.ToString();
-                pago.txtSaldoPendiente.Text = DGVfacturas.SelectedRows[0].Cells[7].Value.ToString();
-                pago.txtSaldoUSD.Text = DGVfacturas.SelectedRows[0].Cells[8].Value.ToString();
+                
+                pago.txtSaldoPendiente.Text = DGVfacturas.SelectedRows[0].Cells[6].Value.ToString();
+                pago.txtSaldoUSD.Text = DGVfacturas.SelectedRows[0].Cells[7].Value.ToString();
 
                 conexion.Open();
                 string query = "select proveedor.ID_proveedor, Factura.FacturaN, Proveedor.nombreProveedor, Factura.abono " +
                     "from Factura " +
                     "inner join Proveedor on Factura.ID_proveedor = Proveedor.ID_proveedor " +
-                    "where ID_factura ='" + DGVfacturas.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                    "where FacturaN ='" + DGVfacturas.SelectedRows[0].Cells[0].Value.ToString() + "'";
 
 
 

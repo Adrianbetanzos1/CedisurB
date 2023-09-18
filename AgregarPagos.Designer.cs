@@ -41,8 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtNombreFactura = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtIdFactura = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtSaldoPendiente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSaldoUSD = new System.Windows.Forms.TextBox();
@@ -174,7 +172,7 @@
             // TxtNombreFactura
             // 
             this.TxtNombreFactura.Enabled = false;
-            this.TxtNombreFactura.Location = new System.Drawing.Point(474, 251);
+            this.TxtNombreFactura.Location = new System.Drawing.Point(54, 239);
             this.TxtNombreFactura.Name = "TxtNombreFactura";
             this.TxtNombreFactura.Size = new System.Drawing.Size(333, 20);
             this.TxtNombreFactura.TabIndex = 16;
@@ -185,36 +183,16 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(469, 223);
+            this.label4.Location = new System.Drawing.Point(49, 211);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(291, 25);
             this.label4.TabIndex = 15;
             this.label4.Text = "NOMBRE DE LA FACTURA";
             // 
-            // TxtIdFactura
-            // 
-            this.TxtIdFactura.Enabled = false;
-            this.TxtIdFactura.Location = new System.Drawing.Point(53, 251);
-            this.TxtIdFactura.Name = "TxtIdFactura";
-            this.TxtIdFactura.Size = new System.Drawing.Size(333, 20);
-            this.TxtIdFactura.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(48, 223);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 25);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "ID DE LA FACTURA";
-            // 
             // txtSaldoPendiente
             // 
             this.txtSaldoPendiente.Enabled = false;
-            this.txtSaldoPendiente.Location = new System.Drawing.Point(894, 251);
+            this.txtSaldoPendiente.Location = new System.Drawing.Point(474, 239);
             this.txtSaldoPendiente.Name = "txtSaldoPendiente";
             this.txtSaldoPendiente.Size = new System.Drawing.Size(333, 20);
             this.txtSaldoPendiente.TabIndex = 29;
@@ -225,7 +203,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(889, 223);
+            this.label11.Location = new System.Drawing.Point(469, 211);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(278, 25);
             this.label11.TabIndex = 28;
@@ -464,8 +442,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtNombreFactura);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TxtIdFactura);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtNombrePro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -496,7 +472,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox txtSaldoPendiente;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.TextBox txtSaldoUSD;
@@ -516,7 +491,6 @@
         public System.Windows.Forms.TextBox TxtNombrePro;
         public System.Windows.Forms.TextBox TxtID;
         public System.Windows.Forms.TextBox TxtNombreFactura;
-        public System.Windows.Forms.TextBox TxtIdFactura;
         public System.Windows.Forms.TextBox TxtImporteUSD;
         public System.Windows.Forms.TextBox TxtImporteMXP;
         public System.Windows.Forms.TextBox TxtNumContrato;

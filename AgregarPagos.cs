@@ -28,7 +28,7 @@ namespace CedisurB
 
         private void LimpiarDatos()
         {
-            TxtIdFactura.Clear();
+            
             TxtID.Clear();
             TxtNombreFactura.Clear();
             TxtNombrePro.Clear();
@@ -75,7 +75,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string query = "SELECT saldoMXP FROM Factura where ID_factura ='" + TxtIdFactura.Text + "'";
+                string query = "SELECT saldoMXP FROM Factura where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     object result = command.ExecuteScalar();
@@ -101,7 +101,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string query = "SELECT saldoUSD FROM Factura where ID_factura ='" + TxtIdFactura.Text + "'";
+                string query = "SELECT saldoUSD FROM Factura where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     object result = command.ExecuteScalar();
@@ -126,7 +126,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string query = "SELECT abono FROM Factura where ID_factura ='" + TxtIdFactura.Text + "'";
+                string query = "SELECT abono FROM Factura where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     object result = command.ExecuteScalar();
@@ -150,7 +150,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string updateQuery = "UPDATE Factura SET abono = @nuevoSumaTotalAbono where ID_factura ='" + TxtIdFactura.Text + "'";
+                string updateQuery = "UPDATE Factura SET abono = @nuevoSumaTotalAbono where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(updateQuery, connection))
                 {
                     command.Parameters.AddWithValue("@nuevoSumaTotalAbono", nuevoSumaTotalAbono);
@@ -168,7 +168,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string updateQuery = "UPDATE Factura SET saldoMXP = @nuevoSumaTotalSaldo where ID_factura ='" + TxtIdFactura.Text + "'";
+                string updateQuery = "UPDATE Factura SET saldoMXP = @nuevoSumaTotalSaldo where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(updateQuery, connection))
                 {
                     command.Parameters.AddWithValue("@nuevoSumaTotalSaldo", nuevoSumaTotalSaldo);
@@ -186,7 +186,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string updateQuery = "UPDATE Factura SET saldoUSD = @nuevoSumaTotalSaldoUSD where ID_factura ='" + TxtIdFactura.Text + "'";
+                string updateQuery = "UPDATE Factura SET saldoUSD = @nuevoSumaTotalSaldoUSD where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(updateQuery, connection))
                 {
                     command.Parameters.AddWithValue("@nuevoSumaTotalSaldoUSD", nuevoSumaTotalSaldoUSD);
@@ -214,7 +214,7 @@ namespace CedisurB
 
                 using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
                 {
-                    SqlCommand cmd = new SqlCommand("Insert into Pagos(facturaN,importePagoMXP,importePagoUSD, fechaPago, SPEI, numCuenta, numContrato,ID_proveedor,ID_factura,TipoDeCambio) values (@facturaN,@importePagoMXP,@importePagoUSD,@fechaPago, @SPEI,@numCuenta, @numContrato,@ID_proveedor,@ID_factura,@tipoDeCambio)")
+                    SqlCommand cmd = new SqlCommand("Insert into Pagos(facturaN,importePagoMXP,importePagoUSD, fechaPago, SPEI, numCuenta, numContrato,ID_proveedor,TipoDeCambio) values (@facturaN,@importePagoMXP,@importePagoUSD,@fechaPago, @SPEI,@numCuenta, @numContrato,@ID_proveedor,@tipoDeCambio)")
                     {
                         CommandType = CommandType.Text,
                         Connection = conexion
@@ -228,7 +228,6 @@ namespace CedisurB
                     cmd.Parameters.AddWithValue("@numCuenta", TxtNumeroCuenta.Text);
                     cmd.Parameters.AddWithValue("@numContrato", TxtNumContrato.Text);
                     cmd.Parameters.AddWithValue("@ID_proveedor", TxtID.Text);
-                    cmd.Parameters.AddWithValue("@ID_factura", TxtIdFactura.Text);
                     cmd.Parameters.AddWithValue("@tipoDeCambio", TxtDolar.Text);
 
                     //Datos del saldo en dls y mxp

@@ -44,7 +44,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string query = "SELECT saldoAnterior FROM Factura where ID_factura ='" + TxtIdFactura.Text + "'";
+                string query = "SELECT saldoAnterior FROM Factura where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     object result = command.ExecuteScalar();
@@ -68,7 +68,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string query = "SELECT saldoAnteriorUSD FROM Factura where ID_factura ='" + TxtIdFactura.Text + "'";
+                string query = "SELECT saldoAnteriorUSD FROM Factura where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     object result = command.ExecuteScalar();
@@ -91,7 +91,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string updateQuery = "UPDATE Factura SET saldoMXP = @nuevoSumaTotalSaldo where ID_factura ='" + TxtIdFactura.Text + "'";
+                string updateQuery = "UPDATE Factura SET saldoMXP = @nuevoSumaTotalSaldo where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(updateQuery, connection))
                 {
 
@@ -109,7 +109,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string updateQuery = "UPDATE Factura SET saldoUSD = @nuevoSumaTotalSaldoUSD where ID_factura ='" + TxtIdFactura.Text + "'";
+                string updateQuery = "UPDATE Factura SET saldoUSD = @nuevoSumaTotalSaldoUSD where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(updateQuery, connection))
                 {
                     command.Parameters.AddWithValue("@nuevoSumaTotalSaldoUSD", nuevoSumaTotalSaldoUSD);
@@ -130,7 +130,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string query = "SELECT AbonoAnterior FROM Factura where ID_factura ='" + TxtIdFactura.Text + "'";
+                string query = "SELECT AbonoAnterior FROM Factura where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
                     object result = command.ExecuteScalar();
@@ -154,7 +154,7 @@ namespace CedisurB
             {
                 connection.Open();
 
-                string updateQuery = "UPDATE Factura SET abono = @nuevoSumaTotalAbono where ID_factura ='" + TxtIdFactura.Text + "'";
+                string updateQuery = "UPDATE Factura SET abono = @nuevoSumaTotalAbono where FacturaN ='" + TxtNombreFactura.Text + "'";
                 using (SqlCommand command = new SqlCommand(updateQuery, connection))
                 {
                     command.Parameters.AddWithValue("@nuevoSumaTotalAbono", nuevoSumaTotalAbono);
@@ -277,7 +277,7 @@ namespace CedisurB
                 MessageBox.Show("No puede proseguir debido a que el importe que se desea agregar es mayor al saldo pendiente", "Advertencia");
 
             }
-            else if (MessageBox.Show("Estas seguro que deseas aplicar este pago?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            else if (MessageBox.Show("Estas seguro que deseas modificar este pago?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 Modificar();
                 this.Close();

@@ -70,8 +70,7 @@ namespace CedisurB
             DGVpagos.Columns[6].HeaderText = "Número de cuenta";
             DGVpagos.Columns[7].HeaderText = "Número de contrato";
             DGVpagos.Columns[8].HeaderText = "ID proveedor";
-            DGVpagos.Columns[9].HeaderText = "ID factura";
-            DGVpagos.Columns[10].HeaderText = "Tipo de cambio el día del pago";
+            DGVpagos.Columns[9].HeaderText = "Tipo de cambio el día del pago";
 
 
         }
@@ -87,10 +86,9 @@ namespace CedisurB
                 var pagos = new EditarPagos();
                 conexion.Open();
                 string query = "select ID_pago, nombreProveedor, SaldoAnterior, SaldoAnteriorUSD, AbonoAnterior " +
-                    "from Pagos inner join Factura " +
-                    "on Factura.ID_factura = Pagos.ID_factura " +
+                    "from Pagos " +
                     "inner join Proveedor " +
-                    "on Proveedor.ID_proveedor = Pagos.ID_proveedor " +
+                    "on Proveedor.ID_proveedor = Pagos.ID_proveedor inner join Factura on Pagos.FacturaN = Factura.FacturaN " +
                     "where Pagos.ID_pago ='" + DGVpagos.SelectedRows[0].Cells[0].Value.ToString() + "'";
 
 
@@ -125,8 +123,8 @@ namespace CedisurB
                 pagos.TxtNumeroCuenta.Text = DGVpagos.SelectedRows[0].Cells[6].Value.ToString();
                 pagos.TxtNumContrato.Text = DGVpagos.SelectedRows[0].Cells[7].Value.ToString();
                 pagos.TxtID.Text = DGVpagos.SelectedRows[0].Cells[8].Value.ToString();
-                pagos.TxtIdFactura.Text = DGVpagos.SelectedRows[0].Cells[9].Value.ToString();
-                pagos.TxtDolar.Text = DGVpagos.SelectedRows[0].Cells[10].Value.ToString();
+               
+                pagos.TxtDolar.Text = DGVpagos.SelectedRows[0].Cells[9].Value.ToString();
 
                 this.Hide();
                 pagos.ShowDialog();

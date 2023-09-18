@@ -53,8 +53,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TxtNombreFactura = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtIdFactura = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.TxtNombrePro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -120,9 +118,9 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.Location = new System.Drawing.Point(509, 626);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(128, 52);
+            this.BtnAgregar.Size = new System.Drawing.Size(152, 64);
             this.BtnAgregar.TabIndex = 77;
-            this.BtnAgregar.Text = "Aplicar pago";
+            this.BtnAgregar.Text = "Modificar datos del pago";
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
@@ -318,26 +316,6 @@
             this.label4.TabIndex = 58;
             this.label4.Text = "NOMBRE DE LA FACTURA";
             // 
-            // TxtIdFactura
-            // 
-            this.TxtIdFactura.Enabled = false;
-            this.TxtIdFactura.Location = new System.Drawing.Point(88, 262);
-            this.TxtIdFactura.Name = "TxtIdFactura";
-            this.TxtIdFactura.Size = new System.Drawing.Size(333, 20);
-            this.TxtIdFactura.TabIndex = 57;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(83, 234);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 25);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "ID DE LA FACTURA";
-            // 
             // TxtNombrePro
             // 
             this.TxtNombrePro.Enabled = false;
@@ -392,7 +370,7 @@
             // TxtIdPago
             // 
             this.TxtIdPago.Enabled = false;
-            this.TxtIdPago.Location = new System.Drawing.Point(88, 198);
+            this.TxtIdPago.Location = new System.Drawing.Point(88, 262);
             this.TxtIdPago.Name = "TxtIdPago";
             this.TxtIdPago.Size = new System.Drawing.Size(333, 20);
             this.TxtIdPago.TabIndex = 79;
@@ -403,7 +381,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(83, 170);
+            this.label13.Location = new System.Drawing.Point(83, 234);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(157, 25);
             this.label13.TabIndex = 78;
@@ -481,8 +459,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TxtNombreFactura);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TxtIdFactura);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.TxtNombrePro);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -526,8 +502,6 @@
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox TxtNombreFactura;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox TxtIdFactura;
-        private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox TxtNombrePro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
