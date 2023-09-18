@@ -26,14 +26,15 @@ namespace CedisurB
         //private readonly int pageSize = 15; // Número de registros a cargar por página
         //private int currentPage = 1;
         //private readonly string connectionString = "server=DESKTOP-717JV41\\SQLEXPRESS ; database=cedisur ; integrated security = true";
-        //Codigo optimizacion
+
+        
+
 
         public VerFacturas()
         {
             InitializeComponent();
             DGVfacturas.DataSource = Facturas.MostrarFactura();
             //LoadData(currentPage);
-
 
         }
 
@@ -49,8 +50,6 @@ namespace CedisurB
         private void VerFacturas_Load(object sender, EventArgs e)
         {
             RestringirAccesos();
-
-            
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)
@@ -132,7 +131,7 @@ namespace CedisurB
             this.Close();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -235,7 +234,7 @@ namespace CedisurB
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void PictureBox3_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }

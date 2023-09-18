@@ -36,7 +36,7 @@ namespace CedisurB.Clases
 
             using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
             {
-                SqlDataAdapter da = new SqlDataAdapter("DT_MostrarFacturasActualizada", conexion);
+                SqlDataAdapter da = new SqlDataAdapter("DT_MostrarFacturasB", conexion);
 
                 DataTable dt = new DataTable();
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;

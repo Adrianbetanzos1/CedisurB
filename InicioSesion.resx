@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
         JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAF5UlEQVR4Xu3dsWoUURiG4e2MoHZCxE6I
@@ -150,10 +150,10 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAEXpJREFUeF7tnWesNkUZhg+CYgcFRT8sGLBXTKwIgihWgopYsEYRsERFRDT2oBIU
+        DwAACw8BkvkDpQAAEXpJREFUeF7tnWesNkUZhg+CYgcFRT8sGLBXTKwIgihWgopYsEYRsERFRDT2oBIU
         QWyoPwhIIgkIiIYQ/mhsFEWxkRhjQVQIIiJYsOt9CW84Hp93dnd295yd2ftKruTL+U7Z2d3n3Z2ZZ55Z
         McYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY4wxI7GZvJ28l3yg3Fk+Su56o/ybr/F/O0i+
         l58xpgq4me8hnyFfL4+Vn5fflZfLv8l/d/Svkp+9WJ4p+Z2vk0+X/C0HkJksd5fPlx+RX5W/l9FNPqbX
@@ -234,7 +234,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAG6FJREFUeF7t3SuUXre5BuCwwsBAQ8NAw8DAQsNCw0DDMMNCw0LDQENDw8LAwMLA
+        vwAADr8BOAVTJAAAG6FJREFUeF7t3SuUXre5BuCwwsBAQ8NAw8DAQsNCw0DDMMNCw0LDQENDw8LAwMLA
         0nP0ppnVqZfGc/t/6ZP0PGu9MM7Ys7e2rp++AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

@@ -18,7 +18,7 @@ namespace CedisurB
     {
         readonly VerProveedores prov = new VerProveedores();
         public new Form ParentForm;
-        DataTable dt = new DataTable();
+        readonly DataTable dt = new DataTable();
         public SaldoPendienteProveedor()
         {
             InitializeComponent();
@@ -54,13 +54,13 @@ namespace CedisurB
             prov.Show();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void PictureBox3_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }

@@ -21,7 +21,7 @@ namespace CedisurB
             InitializeComponent();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
         }
@@ -324,7 +324,7 @@ namespace CedisurB
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void PictureBox3_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }

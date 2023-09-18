@@ -31,8 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarFacturas));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.BtnVolver = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             this.TxtNombrePro = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtIDProveedor = new System.Windows.Forms.TextBox();
@@ -56,13 +57,12 @@
             this.DTPFecha = new System.Windows.Forms.DateTimePicker();
             this.TxtDolar = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Button1 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.BtnAgregar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,13 +79,24 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.PictureBox3);
             this.panel1.Controls.Add(this.BtnVolver);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.PictureBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1298, 52);
             this.panel1.TabIndex = 6;
+            // 
+            // PictureBox3
+            // 
+            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
+            this.PictureBox3.Location = new System.Drawing.Point(1190, 7);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(41, 34);
+            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox3.TabIndex = 33;
+            this.PictureBox3.TabStop = false;
+            this.PictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
             // BtnVolver
             // 
@@ -98,16 +109,16 @@
             this.BtnVolver.UseVisualStyleBackColor = true;
             this.BtnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
-            // pictureBox2
+            // PictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1237, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(58, 42);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
+            this.PictureBox2.Location = new System.Drawing.Point(1237, 7);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(58, 42);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 2;
+            this.PictureBox2.TabStop = false;
+            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // TxtNombrePro
             // 
@@ -338,16 +349,16 @@
             this.label13.TabIndex = 29;
             this.label13.Text = "USD HOY";
             // 
-            // button1
+            // Button1
             // 
-            this.button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1046, 152);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 25);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Convertir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button1.Location = new System.Drawing.Point(1046, 152);
+            this.Button1.Name = "Button1";
+            this.Button1.Size = new System.Drawing.Size(130, 25);
+            this.Button1.TabIndex = 9;
+            this.Button1.Text = "Convertir";
+            this.Button1.UseVisualStyleBackColor = true;
+            this.Button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label21
             // 
@@ -372,17 +383,6 @@
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1190, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 34);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 33;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // AgregarFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -391,7 +391,7 @@
             this.ClientSize = new System.Drawing.Size(1320, 720);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Button1);
             this.Controls.Add(this.TxtDolar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -423,8 +423,8 @@
             this.Text = "AgregarFacturas";
             this.Load += new System.EventHandler(this.AgregarFacturas_Load_1);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,7 +435,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button BtnVolver;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -448,7 +448,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Button1;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button BtnAgregar;
         public System.Windows.Forms.TextBox TxtNombrePro;
@@ -462,6 +462,6 @@
         public System.Windows.Forms.TextBox TxtSaldoMXP;
         public System.Windows.Forms.DateTimePicker DTPFecha;
         public System.Windows.Forms.TextBox TxtDolar;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox PictureBox3;
     }
 }

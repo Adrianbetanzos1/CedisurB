@@ -18,7 +18,7 @@ namespace CedisurB
             CustomizeDesign();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void PictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -127,7 +127,7 @@ namespace CedisurB
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             VerPagos pagos = new VerPagos();
             pagos.Show();
@@ -141,7 +141,7 @@ namespace CedisurB
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
             VerUsuarios usuarios = new VerUsuarios();
             usuarios.Show();
@@ -155,7 +155,7 @@ namespace CedisurB
             
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void PictureBox3_Click(object sender, EventArgs e)
         { 
             WindowState = FormWindowState.Minimized;
         }
