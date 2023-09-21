@@ -60,7 +60,7 @@ namespace CedisurB
                     suma += valorCelda;
                     valoresUnicos.Add(valorCelda);
                     // Actualizar el TextBox de suma con la nueva suma
-                    TxtSuma.Text = suma.ToString();
+                    TxtSuma.Text = "$" + suma.ToString();
 
                     string columna1 = DGVproveedores.Rows[e.RowIndex].Cells["nombreProveedor"].Value.ToString();
                     string columna2 = DGVproveedores.Rows[e.RowIndex].Cells["numContrato"].Value.ToString();
@@ -132,7 +132,7 @@ namespace CedisurB
                 suma -= valorCelda;
 
                 // Actualizar el TextBox de suma con la nueva suma
-                TxtSuma.Text = suma.ToString();
+                TxtSuma.Text = "$"+suma.ToString();
 
                 // Eliminar la fila seleccionada del DataGridView de registros seleccionados
                 DGVProveedor1.Rows.Remove(filaSeleccionada);
