@@ -43,7 +43,7 @@ namespace CedisurB
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtNombreFactura.Text) || string.IsNullOrEmpty(TxtAbono.Text) || string.IsNullOrEmpty(TxtDiasVencimiento.Text) || string.IsNullOrEmpty(TxtImporte.Text) || string.IsNullOrEmpty(TxtImporteUSD.Text) || string.IsNullOrEmpty(TxtSaldoUSD.Text) || TxtDolar.Text == "")
+            if (string.IsNullOrEmpty(TxtNombreFactura.Text) || string.IsNullOrEmpty(TxtNumContrato.Text) || string.IsNullOrEmpty(TxtAbono.Text) || string.IsNullOrEmpty(TxtDiasVencimiento.Text) || string.IsNullOrEmpty(TxtImporte.Text) || string.IsNullOrEmpty(TxtImporteUSD.Text) || string.IsNullOrEmpty(TxtSaldoUSD.Text) || TxtDolar.Text == "")
             {
                 MessageBox.Show("Colocar los datos faltantes antes de continuar");
             }
@@ -56,7 +56,7 @@ namespace CedisurB
             {
                 using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
                 {
-                    SqlCommand cmd = new SqlCommand("Insert into Factura(facturaN, fechaFactura, diasVencimiento, importeMXP,importeUSD, abono, saldoMXP, saldoUSD,ID_proveedor, TipoDeCambio, SaldoAnterior, SaldoAnteriorUSD,AbonoAnterior) values (@facturaN, @fechaFactura, @diasVencimiento, @importe,@importeUSD, @abono, @saldoMXP, @saldoUSD,@ID_proveedor,@TipoDeCambio, @saldoAnterior, @saldoAnteriorUSD, @abonoAnterior)")
+                    SqlCommand cmd = new SqlCommand("Insert into Factura(facturaN, fechaFactura, diasVencimiento, importeMXP,importeUSD, abono, saldoMXP, saldoUSD,numContrato, ID_proveedor, TipoDeCambio, SaldoAnterior, SaldoAnteriorUSD,AbonoAnterior) values (@facturaN, @fechaFactura, @diasVencimiento, @importe,@importeUSD, @abono, @saldoMXP, @saldoUSD, @numContrato, @ID_proveedor,@TipoDeCambio, @saldoAnterior, @saldoAnteriorUSD, @abonoAnterior)")
                     {
                         CommandType = CommandType.Text,
                         Connection = conexion
@@ -70,6 +70,8 @@ namespace CedisurB
                     cmd.Parameters.AddWithValue("@abono", float.Parse(TxtAbono.Text).ToString("F2"));
                     cmd.Parameters.AddWithValue("@saldoMXP", float.Parse(TxtSaldoMXP.Text).ToString("F2"));
                     cmd.Parameters.AddWithValue("@saldoUSD", float.Parse(TxtSaldoUSD.Text).ToString("F2"));
+
+                    cmd.Parameters.AddWithValue("@numContrato", TxtNumContrato.Text);
                     cmd.Parameters.AddWithValue("@ID_proveedor", TxtIDProveedor.Text);
                     cmd.Parameters.AddWithValue("@TipoDeCambio", TxtDolar.Text);
                     cmd.Parameters.AddWithValue("@saldoAnterior", float.Parse(TxtSaldoMXP.Text).ToString("F2"));

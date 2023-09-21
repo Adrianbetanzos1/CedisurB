@@ -60,7 +60,7 @@ namespace CedisurB
         private void VerPagos_Load(object sender, EventArgs e)
         {
             RestringirAccesos();
-            DGVpagos.DataSource = pago.MostrarFacturas();
+            DGVpagos.DataSource = pago.Mostrar();
             DGVpagos.Columns[0].HeaderText = "Número de pago";
             DGVpagos.Columns[1].HeaderText = "Número factura";
             DGVpagos.Columns[2].HeaderText = "Importe MXP";
@@ -68,9 +68,8 @@ namespace CedisurB
             DGVpagos.Columns[4].HeaderText = "Fecha de pago";
             DGVpagos.Columns[5].HeaderText = "SPEI";
             DGVpagos.Columns[6].HeaderText = "Número de cuenta";
-            DGVpagos.Columns[7].HeaderText = "Número de contrato";
-            DGVpagos.Columns[8].HeaderText = "ID proveedor";
-            DGVpagos.Columns[9].HeaderText = "Tipo de cambio el día del pago";
+            DGVpagos.Columns[7].HeaderText = "ID proveedor";
+            DGVpagos.Columns[8].HeaderText = "Tipo de cambio el día del pago";
 
 
         }
@@ -121,10 +120,8 @@ namespace CedisurB
                 pagos.DTPFechaPago.Value = (DateTime)DGVpagos.SelectedRows[0].Cells[4].Value;
                 pagos.CbSPEI.SelectedValue = DGVpagos.SelectedRows[0].Cells[5].Value.ToString();
                 pagos.TxtNumeroCuenta.Text = DGVpagos.SelectedRows[0].Cells[6].Value.ToString();
-                pagos.TxtNumContrato.Text = DGVpagos.SelectedRows[0].Cells[7].Value.ToString();
-                pagos.TxtID.Text = DGVpagos.SelectedRows[0].Cells[8].Value.ToString();
-               
-                pagos.TxtDolar.Text = DGVpagos.SelectedRows[0].Cells[9].Value.ToString();
+                pagos.TxtID.Text = DGVpagos.SelectedRows[0].Cells[7].Value.ToString();
+                pagos.TxtDolar.Text = DGVpagos.SelectedRows[0].Cells[8].Value.ToString();
 
                 this.Hide();
                 pagos.ShowDialog();

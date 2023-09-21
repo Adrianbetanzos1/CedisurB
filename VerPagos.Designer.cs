@@ -163,7 +163,7 @@
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(1236, 159);
+            this.Button1.Location = new System.Drawing.Point(1233, 159);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(128, 58);
             this.Button1.TabIndex = 50;

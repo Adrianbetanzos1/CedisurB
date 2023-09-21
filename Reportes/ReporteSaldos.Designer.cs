@@ -64,7 +64,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(814, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(727, 450);
             this.reportViewer1.TabIndex = 0;
             // 
             // dT_MostrarSaldosTableAdapter
@@ -99,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 450);
+            this.ClientSize = new System.Drawing.Size(727, 450);
             this.Controls.Add(this.TxtFechaFinal);
             this.Controls.Add(this.TxtFechainicio);
             this.Controls.Add(this.TxtProveedor);

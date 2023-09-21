@@ -43,8 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.TxtImporteMXP = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.TxtNumContrato = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.TxtNumeroCuenta = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSaldoPendiente = new System.Windows.Forms.TextBox();
@@ -116,7 +114,7 @@
             // BtnAgregar
             // 
             this.BtnAgregar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.Location = new System.Drawing.Point(509, 626);
+            this.BtnAgregar.Location = new System.Drawing.Point(586, 625);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(152, 64);
             this.BtnAgregar.TabIndex = 77;
@@ -217,25 +215,6 @@
             this.label8.Size = new System.Drawing.Size(244, 25);
             this.label8.TabIndex = 68;
             this.label8.Text = "IMPORTE PAGO MXP";
-            // 
-            // TxtNumContrato
-            // 
-            this.TxtNumContrato.Location = new System.Drawing.Point(509, 574);
-            this.TxtNumContrato.Name = "TxtNumContrato";
-            this.TxtNumContrato.Size = new System.Drawing.Size(333, 20);
-            this.TxtNumContrato.TabIndex = 67;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(504, 546);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(325, 25);
-            this.label9.TabIndex = 66;
-            this.label9.Text = "NUMERO DE CONTRATO/OC";
             // 
             // TxtNumeroCuenta
             // 
@@ -449,8 +428,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtImporteMXP);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.TxtNumContrato);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.TxtNumeroCuenta);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtSaldoPendiente);
@@ -492,8 +469,6 @@
         private System.Windows.Forms.Label label7;
         public System.Windows.Forms.TextBox TxtImporteMXP;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox TxtNumContrato;
-        private System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox TxtNumeroCuenta;
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.TextBox txtSaldoPendiente;

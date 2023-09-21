@@ -47,6 +47,7 @@
             this.DGVproveedores = new System.Windows.Forms.DataGridView();
             this.BtnEditarPro = new System.Windows.Forms.Button();
             this.BtnSaldoPendient = new System.Windows.Forms.Button();
+            this.Button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -183,7 +184,7 @@
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(1237, 589);
+            this.Button1.Location = new System.Drawing.Point(1237, 679);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(128, 58);
             this.Button1.TabIndex = 41;
@@ -234,11 +235,22 @@
             this.BtnSaldoPendient.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSaldoPendient.Location = new System.Drawing.Point(1237, 465);
             this.BtnSaldoPendient.Name = "BtnSaldoPendient";
-            this.BtnSaldoPendient.Size = new System.Drawing.Size(128, 58);
+            this.BtnSaldoPendient.Size = new System.Drawing.Size(128, 66);
             this.BtnSaldoPendient.TabIndex = 44;
-            this.BtnSaldoPendient.Text = "Saldos Pendientes";
+            this.BtnSaldoPendient.Text = "Saldos Pendientes Individual";
             this.BtnSaldoPendient.UseVisualStyleBackColor = true;
             this.BtnSaldoPendient.Click += new System.EventHandler(this.BtnSaldoPendient_Click);
+            // 
+            // Button3
+            // 
+            this.Button3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button3.Location = new System.Drawing.Point(1237, 582);
+            this.Button3.Name = "Button3";
+            this.Button3.Size = new System.Drawing.Size(128, 66);
+            this.Button3.TabIndex = 45;
+            this.Button3.Text = "Saldos Pendientes general";
+            this.Button3.UseVisualStyleBackColor = true;
+            this.Button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // VerProveedores
             // 
@@ -246,6 +258,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1384, 749);
+            this.Controls.Add(this.Button3);
             this.Controls.Add(this.BtnSaldoPendient);
             this.Controls.Add(this.BtnEditarPro);
             this.Controls.Add(this.DGVproveedores);
@@ -291,5 +304,6 @@
         public System.Windows.Forms.DataGridView DGVproveedores;
         private System.Windows.Forms.PictureBox PictureBox3;
         private System.Windows.Forms.Button BtnSaldoPendient;
+        private System.Windows.Forms.Button Button3;
     }
 }

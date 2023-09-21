@@ -235,6 +235,12 @@
     <Compile Include="Reportes\ReporteFiltrado.Designer.cs">
       <DependentUpon>ReporteFiltrado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\ReporteSaldoGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSaldoGeneral.Designer.cs">
+      <DependentUpon>ReporteSaldoGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ReporteSaldos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,18 @@
     <Compile Include="Reportes\ReportesFacturas.Designer.cs">
       <DependentUpon>ReportesFacturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\ReporteSumaSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSumaSaldos.Designer.cs">
+      <DependentUpon>ReporteSumaSaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaldoPendienteGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaldoPendienteGeneral.Designer.cs">
+      <DependentUpon>SaldoPendienteGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaldoPendienteProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +272,12 @@
       <DependentUpon>SaldoPendienteProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="SumaFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SumaFacturas.Designer.cs">
+      <DependentUpon>SumaFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserModel.cs" />
     <Compile Include="VerFacturas.cs">
       <SubType>Form</SubType>
@@ -320,8 +344,13 @@
     </Compile>
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
+    <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\Report4.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteFiltrado.resx">
       <DependentUpon>ReporteFiltrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSaldoGeneral.resx">
+      <DependentUpon>ReporteSaldoGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteSaldos.resx">
       <DependentUpon>ReporteSaldos.cs</DependentUpon>
@@ -329,8 +358,17 @@
     <EmbeddedResource Include="Reportes\ReportesFacturas.resx">
       <DependentUpon>ReportesFacturas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSumaSaldos.resx">
+      <DependentUpon>ReporteSumaSaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaldoPendienteGeneral.resx">
+      <DependentUpon>SaldoPendienteGeneral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaldoPendienteProveedor.resx">
       <DependentUpon>SaldoPendienteProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SumaFacturas.resx">
+      <DependentUpon>SumaFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VerFacturas.resx">
       <DependentUpon>VerFacturas.cs</DependentUpon>

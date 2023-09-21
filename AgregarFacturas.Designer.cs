@@ -60,6 +60,8 @@
             this.Button1 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.BtnAgregar = new System.Windows.Forms.Button();
+            this.TxtNumContrato = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -304,7 +306,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(54, 327);
+            this.label10.Location = new System.Drawing.Point(54, 316);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(303, 59);
             this.label10.TabIndex = 26;
@@ -383,12 +385,33 @@
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
+            // TxtNumContrato
+            // 
+            this.TxtNumContrato.Location = new System.Drawing.Point(485, 359);
+            this.TxtNumContrato.Name = "TxtNumContrato";
+            this.TxtNumContrato.Size = new System.Drawing.Size(333, 20);
+            this.TxtNumContrato.TabIndex = 35;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Transparent;
+            this.label14.Location = new System.Drawing.Point(480, 331);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(325, 25);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "NUMERO DE CONTRATO/OC";
+            // 
             // AgregarFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(1320, 720);
+            this.Controls.Add(this.TxtNumContrato);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.Button1);
@@ -463,5 +486,7 @@
         public System.Windows.Forms.DateTimePicker DTPFecha;
         public System.Windows.Forms.TextBox TxtDolar;
         private System.Windows.Forms.PictureBox PictureBox3;
+        public System.Windows.Forms.TextBox TxtNumContrato;
+        private System.Windows.Forms.Label label14;
     }
 }

@@ -61,6 +61,57 @@ FROM            Factura INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cn (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Proveedor.nombreProveedor, Factura.FacturaN, Factura.fechaFactura, Factura.diasVencimiento, Factura.importeMXP, Factura.abono, Factura.importeUSD, Factura.saldoMXP, Factura.saldoUSD, Factura.TipoDeCambio, 
+                         Factura.numContrato
+FROM            Factura INNER JOIN
+                         Proveedor ON Factura.ID_proveedor = Proveedor.ID_proveedor</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nombreProveedor" DataSetColumn="nombreProveedor" />
+              <Mapping SourceColumn="FacturaN" DataSetColumn="FacturaN" />
+              <Mapping SourceColumn="fechaFactura" DataSetColumn="fechaFactura" />
+              <Mapping SourceColumn="diasVencimiento" DataSetColumn="diasVencimiento" />
+              <Mapping SourceColumn="importeMXP" DataSetColumn="importeMXP" />
+              <Mapping SourceColumn="abono" DataSetColumn="abono" />
+              <Mapping SourceColumn="importeUSD" DataSetColumn="importeUSD" />
+              <Mapping SourceColumn="saldoMXP" DataSetColumn="saldoMXP" />
+              <Mapping SourceColumn="saldoUSD" DataSetColumn="saldoUSD" />
+              <Mapping SourceColumn="TipoDeCambio" DataSetColumn="TipoDeCambio" />
+              <Mapping SourceColumn="numContrato" DataSetColumn="numContrato" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable2TableAdapter" GeneratorDataComponentClassName="DataTable2TableAdapter" Name="DataTable2" UserDataComponentName="DataTable2TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cn (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Factura.FacturaN, Factura.saldoMXP, Factura.saldoUSD, Proveedor.nombreProveedor, Factura.numContrato
+FROM            Factura INNER JOIN
+                         Proveedor ON Factura.ID_proveedor = Proveedor.ID_proveedor</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FacturaN" DataSetColumn="FacturaN" />
+              <Mapping SourceColumn="saldoMXP" DataSetColumn="saldoMXP" />
+              <Mapping SourceColumn="saldoUSD" DataSetColumn="saldoUSD" />
+              <Mapping SourceColumn="nombreProveedor" DataSetColumn="nombreProveedor" />
+              <Mapping SourceColumn="numContrato" DataSetColumn="numContrato" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -94,7 +145,7 @@ FROM            Factura INNER JOIN
               <xs:element name="saldoUSD" msprop:Generator_ColumnPropNameInTable="saldoUSDColumn" msprop:Generator_ColumnPropNameInRow="saldoUSD" msprop:Generator_UserColumnName="saldoUSD" msprop:Generator_ColumnVarNameInTable="columnsaldoUSD" type="xs:float" />
               <xs:element name="TipoDeCambio" msprop:Generator_ColumnPropNameInTable="TipoDeCambioColumn" msprop:Generator_ColumnPropNameInRow="TipoDeCambio" msprop:Generator_UserColumnName="TipoDeCambio" msprop:Generator_ColumnVarNameInTable="columnTipoDeCambio" type="xs:float" />
               <xs:element name="importeUSD1" msdata:Caption="importeUSD" msprop:Generator_ColumnPropNameInTable="importeUSD1Column" msprop:Generator_ColumnPropNameInRow="importeUSD1" msprop:Generator_UserColumnName="importeUSD1" msprop:Generator_ColumnVarNameInTable="columnimporteUSD1" type="xs:float" />
-              <xs:element name="nombreProveedor" msprop:Generator_ColumnPropNameInRow="nombreProveedor" msprop:Generator_ColumnPropNameInTable="nombreProveedorColumn" msprop:Generator_ColumnVarNameInTable="columnnombreProveedor" msprop:Generator_UserColumnName="nombreProveedor">
+              <xs:element name="nombreProveedor" msprop:Generator_ColumnPropNameInTable="nombreProveedorColumn" msprop:Generator_ColumnPropNameInRow="nombreProveedor" msprop:Generator_UserColumnName="nombreProveedor" msprop:Generator_ColumnVarNameInTable="columnnombreProveedor">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -123,6 +174,70 @@ FROM            Factura INNER JOIN
               <xs:element name="saldoUSD" msprop:Generator_ColumnPropNameInTable="saldoUSDColumn" msprop:Generator_ColumnPropNameInRow="saldoUSD" msprop:Generator_UserColumnName="saldoUSD" msprop:Generator_ColumnVarNameInTable="columnsaldoUSD" type="xs:float" />
               <xs:element name="TipoDeCambio" msprop:Generator_ColumnPropNameInTable="TipoDeCambioColumn" msprop:Generator_ColumnPropNameInRow="TipoDeCambio" msprop:Generator_UserColumnName="TipoDeCambio" msprop:Generator_ColumnVarNameInTable="columnTipoDeCambio" type="xs:float" />
               <xs:element name="nombreProveedor" msprop:Generator_ColumnPropNameInTable="nombreProveedorColumn" msprop:Generator_ColumnPropNameInRow="nombreProveedor" msprop:Generator_UserColumnName="nombreProveedor" msprop:Generator_ColumnVarNameInTable="columnnombreProveedor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nombreProveedor" msprop:Generator_UserColumnName="nombreProveedor" msprop:Generator_ColumnPropNameInTable="nombreProveedorColumn" msprop:Generator_ColumnPropNameInRow="nombreProveedor" msprop:Generator_ColumnVarNameInTable="columnnombreProveedor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FacturaN" msprop:Generator_UserColumnName="FacturaN" msprop:Generator_ColumnPropNameInTable="FacturaNColumn" msprop:Generator_ColumnPropNameInRow="FacturaN" msprop:Generator_ColumnVarNameInTable="columnFacturaN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaFactura" msprop:Generator_UserColumnName="fechaFactura" msprop:Generator_ColumnPropNameInTable="fechaFacturaColumn" msprop:Generator_ColumnPropNameInRow="fechaFactura" msprop:Generator_ColumnVarNameInTable="columnfechaFactura" type="xs:dateTime" />
+              <xs:element name="diasVencimiento" msprop:Generator_UserColumnName="diasVencimiento" msprop:Generator_ColumnPropNameInTable="diasVencimientoColumn" msprop:Generator_ColumnPropNameInRow="diasVencimiento" msprop:Generator_ColumnVarNameInTable="columndiasVencimiento" type="xs:int" />
+              <xs:element name="importeMXP" msprop:Generator_UserColumnName="importeMXP" msprop:Generator_ColumnPropNameInTable="importeMXPColumn" msprop:Generator_ColumnPropNameInRow="importeMXP" msprop:Generator_ColumnVarNameInTable="columnimporteMXP" type="xs:float" />
+              <xs:element name="abono" msprop:Generator_UserColumnName="abono" msprop:Generator_ColumnPropNameInTable="abonoColumn" msprop:Generator_ColumnPropNameInRow="abono" msprop:Generator_ColumnVarNameInTable="columnabono" type="xs:float" />
+              <xs:element name="importeUSD" msprop:Generator_UserColumnName="importeUSD" msprop:Generator_ColumnPropNameInTable="importeUSDColumn" msprop:Generator_ColumnPropNameInRow="importeUSD" msprop:Generator_ColumnVarNameInTable="columnimporteUSD" type="xs:float" />
+              <xs:element name="saldoMXP" msprop:Generator_UserColumnName="saldoMXP" msprop:Generator_ColumnPropNameInTable="saldoMXPColumn" msprop:Generator_ColumnPropNameInRow="saldoMXP" msprop:Generator_ColumnVarNameInTable="columnsaldoMXP" type="xs:float" />
+              <xs:element name="saldoUSD" msprop:Generator_UserColumnName="saldoUSD" msprop:Generator_ColumnPropNameInTable="saldoUSDColumn" msprop:Generator_ColumnPropNameInRow="saldoUSD" msprop:Generator_ColumnVarNameInTable="columnsaldoUSD" type="xs:float" />
+              <xs:element name="TipoDeCambio" msprop:Generator_UserColumnName="TipoDeCambio" msprop:Generator_ColumnPropNameInTable="TipoDeCambioColumn" msprop:Generator_ColumnPropNameInRow="TipoDeCambio" msprop:Generator_ColumnVarNameInTable="columnTipoDeCambio" type="xs:float" />
+              <xs:element name="numContrato" msprop:Generator_UserColumnName="numContrato" msprop:Generator_ColumnPropNameInTable="numContratoColumn" msprop:Generator_ColumnPropNameInRow="numContrato" msprop:Generator_ColumnVarNameInTable="columnnumContrato" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_RowClassName="DataTable2Row" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_UserTableName="DataTable2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FacturaN" msprop:Generator_ColumnPropNameInRow="FacturaN" msprop:Generator_ColumnPropNameInTable="FacturaNColumn" msprop:Generator_ColumnVarNameInTable="columnFacturaN" msprop:Generator_UserColumnName="FacturaN">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="saldoMXP" msprop:Generator_ColumnPropNameInRow="saldoMXP" msprop:Generator_ColumnPropNameInTable="saldoMXPColumn" msprop:Generator_ColumnVarNameInTable="columnsaldoMXP" msprop:Generator_UserColumnName="saldoMXP" type="xs:float" />
+              <xs:element name="saldoUSD" msprop:Generator_ColumnPropNameInRow="saldoUSD" msprop:Generator_ColumnPropNameInTable="saldoUSDColumn" msprop:Generator_ColumnVarNameInTable="columnsaldoUSD" msprop:Generator_UserColumnName="saldoUSD" type="xs:float" />
+              <xs:element name="nombreProveedor" msprop:Generator_ColumnPropNameInRow="nombreProveedor" msprop:Generator_ColumnPropNameInTable="nombreProveedorColumn" msprop:Generator_ColumnVarNameInTable="columnnombreProveedor" msprop:Generator_UserColumnName="nombreProveedor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="numContrato" msprop:Generator_ColumnPropNameInRow="numContrato" msprop:Generator_ColumnPropNameInTable="numContratoColumn" msprop:Generator_ColumnVarNameInTable="columnnumContrato" msprop:Generator_UserColumnName="numContrato" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />

@@ -194,7 +194,7 @@ namespace CedisurB
                 string selectedDate = DTPFechaPago.Value.ToString("yyyy-MM-dd");
                 string query = "update Cedisur.dbo.Pagos set importePagoMXP='" + float.Parse(TxtImporteMXP.Text).ToString("F2") + "'," +
                 " importePagoUSD = '" + float.Parse(TxtImporteUSD.Text).ToString("F2") + "' ,fechaPago=CAST('" + selectedDate + "' as datetime)," +
-                " SPEI='" + CbSPEI.SelectedItem + "', numCuenta='" + TxtNumeroCuenta.Text + "', numContrato='" + TxtNumContrato.Text + "' " +
+                " SPEI='" + CbSPEI.SelectedItem + "', numCuenta='" + TxtNumeroCuenta.Text + 
                 ",TipoDeCambio= '" + TxtDolar.Text + "' where  ID_pago= '" + TxtIdPago.Text + "'";
                 SqlCommand comando = new SqlCommand(query, connection);
                 int cant;
@@ -268,7 +268,7 @@ namespace CedisurB
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtImporteMXP.Text) || string.IsNullOrEmpty(TxtImporteUSD.Text) || string.IsNullOrEmpty(TxtNumContrato.Text) || string.IsNullOrEmpty(TxtNumeroCuenta.Text) || CbSPEI.CheckedItems.Count == 0)
+            if (string.IsNullOrEmpty(TxtImporteMXP.Text) || string.IsNullOrEmpty(TxtImporteUSD.Text) || string.IsNullOrEmpty(TxtNumeroCuenta.Text) || CbSPEI.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Colocar los datos faltantes antes de continuar");
             }

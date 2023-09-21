@@ -36,7 +36,7 @@ namespace CedisurB
             TxtImporteUSD.Clear();
             DTPFechaPago.Value = DateTime.Now;
             CbSPEI.ClearSelected();
-            TxtNumContrato.Clear();
+           
             TxtNumeroCuenta.Clear();
             txtSaldoPendiente.Clear();
         }
@@ -200,7 +200,7 @@ namespace CedisurB
         //Método para agregar un registro de un pago nuevo
         private void BtnAgregar_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(TxtImporteMXP.Text) || string.IsNullOrEmpty(TxtImporteUSD.Text) || string.IsNullOrEmpty(TxtNumContrato.Text) || string.IsNullOrEmpty(TxtNumeroCuenta.Text) || CbSPEI.CheckedItems.Count == 0)
+            if (string.IsNullOrEmpty(TxtImporteMXP.Text) || string.IsNullOrEmpty(TxtImporteUSD.Text) || string.IsNullOrEmpty(TxtNumeroCuenta.Text) || CbSPEI.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Colocar los datos faltantes antes de continuar");
             }
@@ -214,7 +214,7 @@ namespace CedisurB
 
                 using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
                 {
-                    SqlCommand cmd = new SqlCommand("Insert into Pagos(facturaN,importePagoMXP,importePagoUSD, fechaPago, SPEI, numCuenta, numContrato,ID_proveedor,TipoDeCambio) values (@facturaN,@importePagoMXP,@importePagoUSD,@fechaPago, @SPEI,@numCuenta, @numContrato,@ID_proveedor,@tipoDeCambio)")
+                    SqlCommand cmd = new SqlCommand("Insert into Pagos(facturaN,importePagoMXP,importePagoUSD, fechaPago, SPEI, numCuenta,ID_proveedor,TipoDeCambio) values (@facturaN,@importePagoMXP,@importePagoUSD,@fechaPago, @SPEI,@numCuenta,@ID_proveedor,@tipoDeCambio)")
                     {
                         CommandType = CommandType.Text,
                         Connection = conexion
@@ -226,7 +226,6 @@ namespace CedisurB
                     cmd.Parameters.AddWithValue("@fechaPago", DTPFechaPago.Value);
                     cmd.Parameters.AddWithValue("@SPEI", CbSPEI.SelectedItem);
                     cmd.Parameters.AddWithValue("@numCuenta", TxtNumeroCuenta.Text);
-                    cmd.Parameters.AddWithValue("@numContrato", TxtNumContrato.Text);
                     cmd.Parameters.AddWithValue("@ID_proveedor", TxtID.Text);
                     cmd.Parameters.AddWithValue("@tipoDeCambio", TxtDolar.Text);
 

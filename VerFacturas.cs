@@ -22,18 +22,33 @@ namespace CedisurB
         private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS ; database=cedisur ; integrated security = true");
 
 
-        private readonly DataTable dataTable = new DataTable();
+        readonly DataTable dt = new DataTable();
         //private readonly int pageSize = 15; // Número de registros a cargar por página
         //private int currentPage = 1;
         //private readonly string connectionString = "server=DESKTOP-717JV41\\SQLEXPRESS ; database=cedisur ; integrated security = true";
 
-        
+
+        private DataTable MostrarFactura()
+        {
+
+            using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("DT_MostrarFacturasB", conexion);
+
+               
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.Fill(dt);
+                conexion.Close();
+                return dt;
+            }
+
+        }
 
 
         public VerFacturas()
         {
             InitializeComponent();
-            DGVfacturas.DataSource = Facturas.MostrarFactura();
+            DGVfacturas.DataSource = MostrarFactura();
             //LoadData(currentPage);
 
         }
@@ -270,11 +285,11 @@ namespace CedisurB
         {
             DateTime fechaInicio = DTPInicio.Value;
             DateTime fechaFinal = DTPfinal.Value;
-
-            DataView vista = dataTable.DefaultView;
+            DataView vista = dt.DefaultView;
             vista.RowFilter = $"fechaFactura >= '{fechaInicio}' and fechaFactura <= '{fechaFinal}' ";
         }
 
+        
     }
     
 }

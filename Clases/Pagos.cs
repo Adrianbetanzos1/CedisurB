@@ -24,7 +24,7 @@ namespace CedisurB.Clases
 
 
 
-        public DataTable MostrarFacturas()
+        public DataTable Mostrar()
         {
 
             using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))

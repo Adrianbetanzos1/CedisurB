@@ -49,8 +49,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.TxtImporteMXP = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.TxtNumContrato = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.TxtNumeroCuenta = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -192,7 +190,7 @@
             // txtSaldoPendiente
             // 
             this.txtSaldoPendiente.Enabled = false;
-            this.txtSaldoPendiente.Location = new System.Drawing.Point(474, 239);
+            this.txtSaldoPendiente.Location = new System.Drawing.Point(894, 239);
             this.txtSaldoPendiente.Name = "txtSaldoPendiente";
             this.txtSaldoPendiente.Size = new System.Drawing.Size(333, 20);
             this.txtSaldoPendiente.TabIndex = 29;
@@ -203,7 +201,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(469, 211);
+            this.label11.Location = new System.Drawing.Point(889, 211);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(278, 25);
             this.label11.TabIndex = 28;
@@ -268,25 +266,6 @@
             this.label8.Size = new System.Drawing.Size(244, 25);
             this.label8.TabIndex = 34;
             this.label8.Text = "IMPORTE PAGO MXP";
-            // 
-            // TxtNumContrato
-            // 
-            this.TxtNumContrato.Location = new System.Drawing.Point(474, 563);
-            this.TxtNumContrato.Name = "TxtNumContrato";
-            this.TxtNumContrato.Size = new System.Drawing.Size(333, 20);
-            this.TxtNumContrato.TabIndex = 33;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(469, 535);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(325, 25);
-            this.label9.TabIndex = 32;
-            this.label9.Text = "NUMERO DE CONTRATO/OC";
             // 
             // TxtNumeroCuenta
             // 
@@ -432,8 +411,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.TxtImporteMXP);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.TxtNumContrato);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.TxtNumeroCuenta);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtSaldoPendiente);
@@ -478,7 +455,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.DateTimePicker DTPFechaPago;
@@ -493,7 +469,6 @@
         public System.Windows.Forms.TextBox TxtNombreFactura;
         public System.Windows.Forms.TextBox TxtImporteUSD;
         public System.Windows.Forms.TextBox TxtImporteMXP;
-        public System.Windows.Forms.TextBox TxtNumContrato;
         public System.Windows.Forms.TextBox TxtNumeroCuenta;
         public System.Windows.Forms.CheckedListBox CbSPEI;
         public System.Windows.Forms.TextBox TxtAbono;

@@ -121,3 +121,7 @@ C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.Reportes.ReportesFactura
 C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.Reportes.ReporteFiltrado.resources
 C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.SaldoPendienteProveedor.resources
 C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.Reportes.ReporteSaldos.resources
+C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.SaldoPendienteGeneral.resources
+C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.Reportes.ReporteSaldoGeneral.resources
+C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.SumaFacturas.resources
+C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.Reportes.ReporteSumaSaldos.resources

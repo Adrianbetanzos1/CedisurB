@@ -195,5 +195,20 @@ namespace CedisurB
                 proveedores.ShowDialog();
             }
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            if (DGVproveedores.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos existentes");
+            }
+            else
+            {
+                SaldoPendienteGeneral saldo = new SaldoPendienteGeneral();
+                saldo.Show();
+                this.Close();
+            }
+            
+        }
     }
 }
