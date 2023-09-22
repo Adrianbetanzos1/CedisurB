@@ -17,7 +17,7 @@ namespace CedisurB
     {
         private int suma = 0;
         readonly DataTable dt = new DataTable();
-        private HashSet<int> valoresUnicos = new HashSet<int>();
+        private readonly HashSet<int> valoresUnicos = new HashSet<int>();
         public SumaFacturas()
         {
             InitializeComponent();
@@ -50,7 +50,10 @@ namespace CedisurB
                 DataGridViewCell celdaSeleccionada = DGVproveedores.Rows[e.RowIndex].Cells[3];
                 int valorCelda = Convert.ToInt32(celdaSeleccionada.Value);
 
-                if (valoresUnicos.Contains(valorCelda))
+                DataGridViewCell celdaSeleccionadaFactura = DGVproveedores.Rows[e.RowIndex].Cells[2];
+                int valorCeldaFactura = Convert.ToInt32(celdaSeleccionadaFactura.Value);
+
+                if (valoresUnicos.Contains(valorCeldaFactura))
                 {
                     MessageBox.Show("Este valor ya ha sido seleccionado.", "Valor Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -94,14 +97,11 @@ namespace CedisurB
             }
         }
 
-
-        
-
         private void SumaFacturas_Load(object sender, EventArgs e)
         {
            
             DGVproveedores.DataSource = MostrarSaldos();
-
+            //Añade los valores de la columna de un dgv a otro
             DGVProveedor1.Columns.Add("nombreProveedor", "nombreProveedor");
             DGVProveedor1.Columns.Add("numContrato", "numContrato");
             DGVProveedor1.Columns.Add("facturaN", "facturaN");
@@ -115,13 +115,13 @@ namespace CedisurB
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            if (DGVproveedores.RowCount == 0)
+            
+            if (DGVProveedor1.RowCount == 0)
             {
                 MessageBox.Show("No hay datos existentes");
             }
             else 
             {
-
                 // Obtener la fila seleccionada
                 DataGridViewRow filaSeleccionada = DGVProveedor1.SelectedRows[0];
 
@@ -170,16 +170,44 @@ namespace CedisurB
         DataTable datosInforme = new DataTable();
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (DGVproveedores.RowCount == 0)
+            if (DGVProveedor1.RowCount == 0)
             {
-                MessageBox.Show("Generará un reporte sin datos", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                MessageBox.Show("No hay datos existentes");
+            }
+            else
+            {
+
+                ShowCustomMessageBox();
             }
 
+        }
 
+
+        private void ShowCustomMessageBox()
+        {
+            SeleccionEmpresas customMessageBox = new SeleccionEmpresas();
+            customMessageBox.Eleccion("Seleccione el diseño para el formato del reporte:", "CEDISUR", "CIESSA", "GICSA");
+
+            customMessageBox.ShowDialog();
+            int selectedOption = customMessageBox.SelectedOption;
             datosInforme = ObtenerDatosDesdeDataGridView(DGVProveedor1);
+            if (selectedOption.Equals(1))
+            {
+                ReporteSumaSaldosCedisur formularioViewer = new ReporteSumaSaldosCedisur(datosInforme);
+                formularioViewer.Show();
 
-            ReporteSumaSaldos formularioViewer = new ReporteSumaSaldos(datosInforme);
-            formularioViewer.Show();
+            }
+            else if (selectedOption == 2)
+            {
+                ReporteSumaSaldos formularioViewer = new ReporteSumaSaldos(datosInforme);
+                formularioViewer.Show();
+            }
+            else if(selectedOption == 3)
+            {
+                ReporteSumaSaldosGicsa formularioViewer = new ReporteSumaSaldosGicsa(datosInforme);
+                formularioViewer.Show();
+            }
+            
         }
 
         

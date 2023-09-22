@@ -259,6 +259,18 @@
     <Compile Include="Reportes\ReporteSumaSaldos.Designer.cs">
       <DependentUpon>ReporteSumaSaldos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\ReporteSumaSaldosCedisur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSumaSaldosCedisur.Designer.cs">
+      <DependentUpon>ReporteSumaSaldosCedisur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteSumaSaldosGicsa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSumaSaldosGicsa.Designer.cs">
+      <DependentUpon>ReporteSumaSaldosGicsa.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaldoPendienteGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +282,12 @@
     </Compile>
     <Compile Include="SaldoPendienteProveedor.Designer.cs">
       <DependentUpon>SaldoPendienteProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SeleccionEmpresas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionEmpresas.Designer.cs">
+      <DependentUpon>SeleccionEmpresas.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="SumaFacturas.cs">
@@ -346,6 +364,8 @@
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\Report4.rdlc" />
+    <EmbeddedResource Include="Reportes\Report5.rdlc" />
+    <EmbeddedResource Include="Reportes\Report6.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteFiltrado.resx">
       <DependentUpon>ReporteFiltrado.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,11 +381,20 @@
     <EmbeddedResource Include="Reportes\ReporteSumaSaldos.resx">
       <DependentUpon>ReporteSumaSaldos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSumaSaldosCedisur.resx">
+      <DependentUpon>ReporteSumaSaldosCedisur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSumaSaldosGicsa.resx">
+      <DependentUpon>ReporteSumaSaldosGicsa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SaldoPendienteGeneral.resx">
       <DependentUpon>SaldoPendienteGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaldoPendienteProveedor.resx">
       <DependentUpon>SaldoPendienteProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionEmpresas.resx">
+      <DependentUpon>SeleccionEmpresas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SumaFacturas.resx">
       <DependentUpon>SumaFacturas.cs</DependentUpon>

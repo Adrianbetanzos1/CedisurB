@@ -125,3 +125,6 @@ C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.SaldoPendienteGeneral.re
 C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.Reportes.ReporteSaldoGeneral.resources
 C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.SumaFacturas.resources
 C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.Reportes.ReporteSumaSaldos.resources
+C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.SeleccionEmpresas.resources
+C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.Reportes.ReporteSumaSaldosCedisur.resources
+C:\Users\flori\source\repos\CedisurB\obj\Debug\CedisurB.Reportes.ReporteSumaSaldosGicsa.resources
