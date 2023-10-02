@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CedisurB
@@ -33,9 +26,12 @@ namespace CedisurB
 
         private void HideSubmenu()
         {
-            if (SubmenuPro.Visible == true || SubMenuFac.Visible == true)
+            if (SubmenuPro.Visible == true || SubMenuFac.Visible == true || SubmenuUsuarios.Visible == true || SubmenuPagos.Visible==true)
             {
                 SubmenuPro.Visible = false;
+                SubMenuFac.Visible=false;
+                SubmenuPagos.Visible=false;
+                SubmenuUsuarios.Visible=false;
 
             }
         }

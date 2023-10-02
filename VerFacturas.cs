@@ -164,8 +164,9 @@ namespace CedisurB
                     ParentForm = this
                 };
 
-                facturas.TxtIdFactura.Text = DGVfacturas.SelectedRows[0].Cells[0].Value.ToString();
-                facturas.TxtNombreFactura.Text = DGVfacturas.SelectedRows[0].Cells[1].Value.ToString();
+                
+                facturas.TxtNombreFactura.Text = DGVfacturas.SelectedRows[0].Cells[0].Value.ToString();
+                facturas.TxtNumContrato.Text = DGVfacturas.SelectedRows[0].Cells[1].Value.ToString();
                 facturas.DTPFecha.Value = (DateTime)DGVfacturas.SelectedRows[0].Cells[2].Value;
                 facturas.TxtDiasVencimiento.Text = DGVfacturas.SelectedRows[0].Cells[3].Value.ToString();
                 facturas.TxtImporte.Text = DGVfacturas.SelectedRows[0].Cells[4].Value.ToString();
@@ -173,8 +174,10 @@ namespace CedisurB
                 facturas.TxtAbono.Text = DGVfacturas.SelectedRows[0].Cells[6].Value.ToString();
                 facturas.TxtSaldoMXP.Text = DGVfacturas.SelectedRows[0].Cells[7].Value.ToString();
                 facturas.TxtSaldoUSD.Text = DGVfacturas.SelectedRows[0].Cells[8].Value.ToString();
-                facturas.TxtIDPro.Text = DGVfacturas.SelectedRows[0].Cells[9].Value.ToString();
-                facturas.TxtDolar.Text = DGVfacturas.SelectedRows[0].Cells[10].Value.ToString();
+                
+                facturas.TxtNombreProveedor.Text = DGVfacturas.SelectedRows[0].Cells[9].Value.ToString();
+                
+                facturas.TxtDolar.Text = DGVfacturas.SelectedRows[0].Cells[11].Value.ToString();
 
                 this.Hide();
                 facturas.ShowDialog();
@@ -221,15 +224,60 @@ namespace CedisurB
         DataTable datosInforme = new DataTable();
         private void Button1_Click(object sender, EventArgs e)
         {
+            if (DGVfacturas.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos existentes");
+            }
+            else
+            {
 
-            datosInforme = ObtenerDatosDesdeDataGridView(DGVfacturas);
-      
-            ReporteFiltrado formularioViewer = new ReporteFiltrado(datosInforme);
-            formularioViewer.TxtFechainicio.Text = DTPInicio.Value.ToString();
-            formularioViewer.TxtFechaFinal.Text = DTPfinal.Value.ToString();
+                ShowCustomMessageBox();
+            }
 
-            formularioViewer.Show();
+
         }
+
+        //Método para mostrar ventana emergente para seleccionar formato
+        private void ShowCustomMessageBox()
+        {
+            SeleccionEmpresas customMessageBox = new SeleccionEmpresas();
+            customMessageBox.Eleccion("Seleccione el diseño para el formato del reporte:", "CEDISUR", "CIESSA", "GICSSA");
+
+            customMessageBox.ShowDialog();
+            int selectedOption = customMessageBox.SelectedOption;
+            datosInforme = ObtenerDatosDesdeDataGridView(DGVfacturas);
+
+            if (selectedOption == 1)
+            {
+                ReporteFiltradoCedisur formularioViewer = new ReporteFiltradoCedisur(datosInforme);
+                
+                formularioViewer.TxtFechainicio.Text = DTPInicio.Value.ToString();
+                formularioViewer.TxtFechaFinal.Text = DTPfinal.Value.ToString();
+                formularioViewer.Show();
+
+            }
+            else if (selectedOption == 2)
+            {
+                ReporteFiltrado formularioViewer = new ReporteFiltrado(datosInforme);
+                formularioViewer.TxtFechainicio.Text = DTPInicio.Value.ToString();
+                formularioViewer.TxtFechaFinal.Text = DTPfinal.Value.ToString();
+
+                formularioViewer.Show();
+            }
+            else if (selectedOption == 3)
+            {
+                ReporteFiltradoGicsa formularioViewer = new ReporteFiltradoGicsa(datosInforme);
+             
+                formularioViewer.TxtFechainicio.Text = DTPInicio.Value.ToString();
+                formularioViewer.TxtFechaFinal.Text = DTPfinal.Value.ToString();
+                formularioViewer.Show();
+            }
+
+        }
+
+
+
+
 
         //Da formato a las celdas de los saldos ya liquidados
         private void DGVfacturas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -289,7 +337,42 @@ namespace CedisurB
             vista.RowFilter = $"fechaFactura >= '{fechaInicio}' and fechaFactura <= '{fechaFinal}' ";
         }
 
+       
         
+        private void CLBEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            var selectedItems = CLBEmpresa.CheckedItems;
+
+            if (selectedItems.Count == 1)
+            {
+                string selectedItem = selectedItems[0].ToString();
+                // Realiza la filtración basada en el valor seleccionado
+                DataView dv = dt.DefaultView;
+                dv.RowFilter = $"EmpresaAsoc = '{selectedItem}'"; // Reemplaza 'ColumnName' con el nombre de la columna que deseas filtrar
+                DGVfacturas.DataSource = dv.ToTable();
+            }
+            else
+            {
+                // Si no se selecciona ningún valor, muestra todos los registros
+                DGVfacturas.DataSource = dt;
+            }
+
+
+        }
+
+        private void CLBEmpresa_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < CLBEmpresa.Items.Count; i++)
+            {
+                if (i != e.Index) // No desmarca la opción actual
+                {
+                    CLBEmpresa.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
+        }
+
+      
     }
     
 }

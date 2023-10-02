@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -46,6 +46,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
@@ -235,17 +238,53 @@
     <Compile Include="Reportes\ReporteFiltrado.Designer.cs">
       <DependentUpon>ReporteFiltrado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\ReporteFiltradoCedisur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteFiltradoCedisur.Designer.cs">
+      <DependentUpon>ReporteFiltradoCedisur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteFiltradoGicsa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteFiltradoGicsa.Designer.cs">
+      <DependentUpon>ReporteFiltradoGicsa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ReporteSaldoGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\ReporteSaldoGeneral.Designer.cs">
       <DependentUpon>ReporteSaldoGeneral.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\ReporteSaldoGeneralCedisur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSaldoGeneralCedisur.Designer.cs">
+      <DependentUpon>ReporteSaldoGeneralCedisur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteSaldoGeneralGicsa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSaldoGeneralGicsa.Designer.cs">
+      <DependentUpon>ReporteSaldoGeneralGicsa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ReporteSaldos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\ReporteSaldos.Designer.cs">
       <DependentUpon>ReporteSaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteSaldosCedisur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSaldosCedisur.Designer.cs">
+      <DependentUpon>ReporteSaldosCedisur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteSaldosGicsa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ReporteSaldosGicsa.Designer.cs">
+      <DependentUpon>ReporteSaldosGicsa.cs</DependentUpon>
     </Compile>
     <Compile Include="Reportes\ReportesFacturas.cs">
       <SubType>Form</SubType>
@@ -361,19 +400,43 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\Report10.rdlc" />
+    <EmbeddedResource Include="Reportes\Report11.rdlc" />
+    <EmbeddedResource Include="Reportes\Report12.rdlc" />
     <EmbeddedResource Include="Reportes\Report2.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\Report4.rdlc" />
     <EmbeddedResource Include="Reportes\Report5.rdlc" />
     <EmbeddedResource Include="Reportes\Report6.rdlc" />
+    <EmbeddedResource Include="Reportes\Report7.rdlc" />
+    <EmbeddedResource Include="Reportes\Report8.rdlc" />
+    <EmbeddedResource Include="Reportes\Report9.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteFiltrado.resx">
       <DependentUpon>ReporteFiltrado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteFiltradoCedisur.resx">
+      <DependentUpon>ReporteFiltradoCedisur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteFiltradoGicsa.resx">
+      <DependentUpon>ReporteFiltradoGicsa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteSaldoGeneral.resx">
       <DependentUpon>ReporteSaldoGeneral.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSaldoGeneralCedisur.resx">
+      <DependentUpon>ReporteSaldoGeneralCedisur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSaldoGeneralGicsa.resx">
+      <DependentUpon>ReporteSaldoGeneralGicsa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteSaldos.resx">
       <DependentUpon>ReporteSaldos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSaldosCedisur.resx">
+      <DependentUpon>ReporteSaldosCedisur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ReporteSaldosGicsa.resx">
+      <DependentUpon>ReporteSaldosGicsa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReportesFacturas.resx">
       <DependentUpon>ReportesFacturas.cs</DependentUpon>
@@ -440,6 +503,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="favicon.ico" />
     <Content Include="Images\befo.png" />
     <Content Include="Images\next.png" />
     <Content Include="Images\user.png" />

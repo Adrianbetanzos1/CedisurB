@@ -76,13 +76,13 @@
             this.panel1.Controls.Add(this.PictureBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 52);
+            this.panel1.Size = new System.Drawing.Size(1146, 52);
             this.panel1.TabIndex = 1;
             // 
             // PictureBox3
             // 
             this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(1225, 8);
+            this.PictureBox3.Location = new System.Drawing.Point(1041, 11);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(41, 34);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -93,9 +93,9 @@
             // BtnUsuarios
             // 
             this.BtnUsuarios.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUsuarios.Location = new System.Drawing.Point(1001, 0);
+            this.BtnUsuarios.Location = new System.Drawing.Point(891, 8);
             this.BtnUsuarios.Name = "BtnUsuarios";
-            this.BtnUsuarios.Size = new System.Drawing.Size(183, 52);
+            this.BtnUsuarios.Size = new System.Drawing.Size(144, 44);
             this.BtnUsuarios.TabIndex = 8;
             this.BtnUsuarios.Text = "USUARIOS";
             this.BtnUsuarios.UseVisualStyleBackColor = true;
@@ -104,9 +104,9 @@
             // BtnPagos
             // 
             this.BtnPagos.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPagos.Location = new System.Drawing.Point(791, 0);
+            this.BtnPagos.Location = new System.Drawing.Point(721, 8);
             this.BtnPagos.Name = "BtnPagos";
-            this.BtnPagos.Size = new System.Drawing.Size(183, 52);
+            this.BtnPagos.Size = new System.Drawing.Size(143, 45);
             this.BtnPagos.TabIndex = 7;
             this.BtnPagos.Text = "PAGOS";
             this.BtnPagos.UseVisualStyleBackColor = true;
@@ -115,9 +115,9 @@
             // BtnFacturas
             // 
             this.BtnFacturas.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnFacturas.Location = new System.Drawing.Point(579, 0);
+            this.BtnFacturas.Location = new System.Drawing.Point(546, 8);
             this.BtnFacturas.Name = "BtnFacturas";
-            this.BtnFacturas.Size = new System.Drawing.Size(183, 52);
+            this.BtnFacturas.Size = new System.Drawing.Size(146, 44);
             this.BtnFacturas.TabIndex = 6;
             this.BtnFacturas.Text = "FACTURAS";
             this.BtnFacturas.UseVisualStyleBackColor = true;
@@ -126,9 +126,9 @@
             // BtnProveedores
             // 
             this.BtnProveedores.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnProveedores.Location = new System.Drawing.Point(367, 0);
+            this.BtnProveedores.Location = new System.Drawing.Point(367, 8);
             this.BtnProveedores.Name = "BtnProveedores";
-            this.BtnProveedores.Size = new System.Drawing.Size(183, 52);
+            this.BtnProveedores.Size = new System.Drawing.Size(147, 44);
             this.BtnProveedores.TabIndex = 2;
             this.BtnProveedores.Text = "PROVEEDORES";
             this.BtnProveedores.UseVisualStyleBackColor = true;
@@ -138,11 +138,11 @@
             // 
             this.LblPosicion.AutoSize = true;
             this.LblPosicion.BackColor = System.Drawing.Color.Transparent;
-            this.LblPosicion.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPosicion.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPosicion.ForeColor = System.Drawing.Color.Black;
-            this.LblPosicion.Location = new System.Drawing.Point(131, 27);
+            this.LblPosicion.Location = new System.Drawing.Point(122, 30);
             this.LblPosicion.Name = "LblPosicion";
-            this.LblPosicion.Size = new System.Drawing.Size(95, 19);
+            this.LblPosicion.Size = new System.Drawing.Size(75, 15);
             this.LblPosicion.TabIndex = 5;
             this.LblPosicion.Text = "POSICION";
             // 
@@ -150,7 +150,7 @@
             // 
             this.BtnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrarSesion.Image")));
-            this.BtnCerrarSesion.Location = new System.Drawing.Point(0, 8);
+            this.BtnCerrarSesion.Location = new System.Drawing.Point(0, 11);
             this.BtnCerrarSesion.Name = "BtnCerrarSesion";
             this.BtnCerrarSesion.Size = new System.Drawing.Size(59, 37);
             this.BtnCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,11 +162,11 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.LblNombre.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombre.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombre.ForeColor = System.Drawing.Color.Black;
-            this.LblNombre.Location = new System.Drawing.Point(131, 8);
+            this.LblNombre.Location = new System.Drawing.Point(122, 11);
             this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(83, 19);
+            this.LblNombre.Size = new System.Drawing.Size(66, 15);
             this.LblNombre.TabIndex = 3;
             this.LblNombre.Text = "USUARIO";
             // 
@@ -174,9 +174,9 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(55, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(55, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 52);
+            this.pictureBox1.Size = new System.Drawing.Size(70, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -184,7 +184,7 @@
             // PictureBox2
             // 
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(1272, 3);
+            this.PictureBox2.Location = new System.Drawing.Point(1088, 6);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(58, 42);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,15 +199,15 @@
             this.SubmenuPro.Controls.Add(this.BtnAgregar);
             this.SubmenuPro.Location = new System.Drawing.Point(380, 60);
             this.SubmenuPro.Name = "SubmenuPro";
-            this.SubmenuPro.Size = new System.Drawing.Size(182, 140);
+            this.SubmenuPro.Size = new System.Drawing.Size(146, 103);
             this.SubmenuPro.TabIndex = 2;
             // 
             // BtnTodos
             // 
             this.BtnTodos.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTodos.Location = new System.Drawing.Point(0, 88);
+            this.BtnTodos.Location = new System.Drawing.Point(0, 53);
             this.BtnTodos.Name = "BtnTodos";
-            this.BtnTodos.Size = new System.Drawing.Size(183, 52);
+            this.BtnTodos.Size = new System.Drawing.Size(146, 35);
             this.BtnTodos.TabIndex = 10;
             this.BtnTodos.Text = "VER TODOS";
             this.BtnTodos.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@
             this.BtnAgregar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.Location = new System.Drawing.Point(0, 10);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(183, 52);
+            this.BtnAgregar.Size = new System.Drawing.Size(146, 37);
             this.BtnAgregar.TabIndex = 9;
             this.BtnAgregar.Text = "AGREGAR";
             this.BtnAgregar.UseVisualStyleBackColor = true;
@@ -228,9 +228,9 @@
             // 
             this.SubMenuFac.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.SubMenuFac.Controls.Add(this.BtnTodosFac);
-            this.SubMenuFac.Location = new System.Drawing.Point(592, 60);
+            this.SubMenuFac.Location = new System.Drawing.Point(558, 60);
             this.SubMenuFac.Name = "SubMenuFac";
-            this.SubMenuFac.Size = new System.Drawing.Size(182, 140);
+            this.SubMenuFac.Size = new System.Drawing.Size(146, 103);
             this.SubMenuFac.TabIndex = 3;
             // 
             // BtnTodosFac
@@ -238,7 +238,7 @@
             this.BtnTodosFac.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnTodosFac.Location = new System.Drawing.Point(0, 10);
             this.BtnTodosFac.Name = "BtnTodosFac";
-            this.BtnTodosFac.Size = new System.Drawing.Size(183, 52);
+            this.BtnTodosFac.Size = new System.Drawing.Size(146, 37);
             this.BtnTodosFac.TabIndex = 11;
             this.BtnTodosFac.Text = "VER TODAS";
             this.BtnTodosFac.UseVisualStyleBackColor = true;
@@ -248,9 +248,9 @@
             // 
             this.SubmenuPagos.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.SubmenuPagos.Controls.Add(this.Button2);
-            this.SubmenuPagos.Location = new System.Drawing.Point(804, 60);
+            this.SubmenuPagos.Location = new System.Drawing.Point(733, 60);
             this.SubmenuPagos.Name = "SubmenuPagos";
-            this.SubmenuPagos.Size = new System.Drawing.Size(182, 140);
+            this.SubmenuPagos.Size = new System.Drawing.Size(143, 103);
             this.SubmenuPagos.TabIndex = 4;
             // 
             // Button2
@@ -258,7 +258,7 @@
             this.Button2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.Location = new System.Drawing.Point(-1, 10);
             this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(183, 52);
+            this.Button2.Size = new System.Drawing.Size(144, 37);
             this.Button2.TabIndex = 12;
             this.Button2.Text = "VER TODOS";
             this.Button2.UseVisualStyleBackColor = true;
@@ -269,17 +269,17 @@
             this.SubmenuUsuarios.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.SubmenuUsuarios.Controls.Add(this.Button3);
             this.SubmenuUsuarios.Controls.Add(this.BtnAgregarNuevoU);
-            this.SubmenuUsuarios.Location = new System.Drawing.Point(1014, 60);
+            this.SubmenuUsuarios.Location = new System.Drawing.Point(903, 60);
             this.SubmenuUsuarios.Name = "SubmenuUsuarios";
-            this.SubmenuUsuarios.Size = new System.Drawing.Size(182, 140);
+            this.SubmenuUsuarios.Size = new System.Drawing.Size(144, 103);
             this.SubmenuUsuarios.TabIndex = 5;
             // 
             // Button3
             // 
             this.Button3.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button3.Location = new System.Drawing.Point(0, 88);
+            this.Button3.Location = new System.Drawing.Point(0, 53);
             this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(183, 52);
+            this.Button3.Size = new System.Drawing.Size(144, 35);
             this.Button3.TabIndex = 14;
             this.Button3.Text = "VER TODOS";
             this.Button3.UseVisualStyleBackColor = true;
@@ -290,7 +290,7 @@
             this.BtnAgregarNuevoU.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregarNuevoU.Location = new System.Drawing.Point(0, 10);
             this.BtnAgregarNuevoU.Name = "BtnAgregarNuevoU";
-            this.BtnAgregarNuevoU.Size = new System.Drawing.Size(183, 52);
+            this.BtnAgregarNuevoU.Size = new System.Drawing.Size(144, 37);
             this.BtnAgregarNuevoU.TabIndex = 13;
             this.BtnAgregarNuevoU.Text = "AGREGAR";
             this.BtnAgregarNuevoU.UseVisualStyleBackColor = true;
@@ -301,7 +301,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1373, 550);
+            this.ClientSize = new System.Drawing.Size(1166, 480);
             this.Controls.Add(this.SubmenuUsuarios);
             this.Controls.Add(this.SubmenuPagos);
             this.Controls.Add(this.SubMenuFac);

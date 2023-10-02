@@ -127,5 +127,7 @@ namespace CedisurB
         {
             WindowState = FormWindowState.Minimized;
         }
+
+       
     }
 }

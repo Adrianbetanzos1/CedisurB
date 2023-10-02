@@ -116,7 +116,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Factura N</Value>
+                                  <Value>Factura </Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -176,7 +176,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>dias Vencimiento</Value>
+                                  <Value>Vencimiento</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -1065,7 +1065,7 @@
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
               <Top>0.97cm</Top>
-              <Left>0.41382cm</Left>
+              <Left>7.91382cm</Left>
               <Height>0.6cm</Height>
               <Width>6.65396cm</Width>
               <Style>

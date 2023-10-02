@@ -1,14 +1,8 @@
 ﻿using CedisurB.Clases;
-using CedisurB.Reportes;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CedisurB
@@ -18,6 +12,9 @@ namespace CedisurB
 
         private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS ; database=cedisur ; integrated security = true");
 
+        private SqlConnection connection;
+        private SqlDataAdapter adapter;
+        private DataTable dataTable;
         public VerProveedores()
         {
             InitializeComponent();
@@ -36,17 +33,30 @@ namespace CedisurB
             }
         }
 
+        
+
         //Método que carga los valores del DGV con sus header text establecidos
         private void VerProveedores_Load(object sender, EventArgs e)
         {
             RestringirAccesos();
-            DGVproveedores.DataSource = Proveedor.MostrarProveedores();
+
+            string connectionString = "Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true";
+            connection = new SqlConnection(connectionString);
+
+            // Crea un adaptador de datos y llena un DataTable
+            adapter = new SqlDataAdapter("DT_MostrarProveedor", connection);
+            dataTable = new DataTable();
+            adapter.Fill(dataTable);
+
+            DGVproveedores.DataSource = dataTable;
             DGVproveedores.Columns[0].HeaderText = "ID proveedor";
             DGVproveedores.Columns[1].HeaderText = "RFC del proveedor";
             DGVproveedores.Columns[2].HeaderText = "Nombre del proveedor";
             DGVproveedores.Columns[3].HeaderText = "Fecha de registro";
             DGVproveedores.Columns[4].HeaderText = "Tipo";
             DGVproveedores.Columns[5].HeaderText = "Tipo de moneda de pago";
+            DGVproveedores.Columns[6].HeaderText = "Empresa asociada"; 
+
         }
 
         private void BtnBuscar_Click_1(object sender, EventArgs e)
@@ -137,7 +147,7 @@ namespace CedisurB
         //Método para buscar según el RFC del proveedor
         private void Button2_Click_1(object sender, EventArgs e)
         {
-            if (TxtBusqueda.Text.Equals(""))
+            if (TxtBusquedaRfc.Text.Equals(""))
             {
                 MessageBox.Show("Necesita ingresar un dato antes", "Advertencia");
             }
@@ -165,6 +175,7 @@ namespace CedisurB
                 proveedores.DTPFecha.Value = (DateTime)DGVproveedores.SelectedRows[0].Cells[3].Value;
                 proveedores.CbTipo.SelectedValue = DGVproveedores.SelectedRows[0].Cells[4].Value.ToString();
                 proveedores.CbMoneda.SelectedValue = DGVproveedores.SelectedRows[0].Cells[5].Value.ToString();
+                proveedores.CLBEmpresa.SelectedValue = DGVproveedores.SelectedRows[0].Cells[6].Value.ToString();
 
                 this.Hide();
                 proveedores.ShowDialog();
@@ -210,5 +221,52 @@ namespace CedisurB
             }
             
         }
+
+        private void BtnBuscarEmpresa_Click(object sender, EventArgs e)
+        {
+            if (DGVproveedores.RowCount == 0)
+            {
+                MessageBox.Show("No hay datos existentes");
+            }
+            else
+            {
+            
+            }
+
+
+        }
+
+
+
+        private void CLBEmpresa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataView dv = dataTable.DefaultView;
+            dv.RowFilter = ConstructFilterExpression();
+            DGVproveedores.DataSource = dv.ToTable();
+        }
+
+
+
+        private string ConstructFilterExpression()
+        {
+            List<string> selectedValues = new List<string>();
+
+            foreach (var item in CLBEmpresa.CheckedItems)
+            {
+                selectedValues.Add($"EmpresaAsoc = '{item}'"); 
+            }
+
+            if (selectedValues.Count > 0)
+            {
+                return string.Join(" OR ", selectedValues);
+            }
+            else
+            {
+                // Si no se selecciona ningún valor, muestra todos los registros
+                return string.Empty;
+            }
+        }
+
+
     }
 }

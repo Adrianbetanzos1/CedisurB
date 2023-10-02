@@ -43,7 +43,7 @@ namespace CedisurB
             string selectedDate = DTPFecha.Value.ToString("yyyy-MM-dd");
             string query = "update Cedisur.dbo.Proveedor " +
                 "set RfcProveedor= '" + TxtRfc.Text + "', nombreProveedor='" + TxtNombreProv.Text + "', fechaDeRegistro=CAST('" + selectedDate + "' as datetime)," +
-                " TipoDeProveedor='" + CbTipo.SelectedItem + "', TipoDePago= '" + CbMoneda.SelectedItem + "' where  ID_proveedor= '" + TxtIDProveedor.Text + "'";
+                " TipoDeProveedor='" + CbTipo.SelectedItem + "', TipoDePago= '" + CbMoneda.SelectedItem + "', EmpresaAsoc= '" + CLBEmpresa.SelectedItem + "' where  ID_proveedor= '" + TxtIDProveedor.Text + "'";
             SqlCommand comando = new SqlCommand(query, conexion);
             int cant;
             cant = comando.ExecuteNonQuery();
@@ -78,6 +78,42 @@ namespace CedisurB
         private void PictureBox3_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        
+
+        private void CLBEmpresa_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < CLBEmpresa.Items.Count; i++)
+            {
+                if (i != e.Index) // No desmarca la opción actual
+                {
+                    CLBEmpresa.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
+
+        }
+
+        private void CbTipo_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < CbTipo.Items.Count; i++)
+            {
+                if (i != e.Index) // No desmarca la opción actual
+                {
+                    CbTipo.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
+        }
+
+        private void CbMoneda_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < CbMoneda.Items.Count; i++)
+            {
+                if (i != e.Index) // No desmarca la opción actual
+                {
+                    CbMoneda.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
         }
     }
 }

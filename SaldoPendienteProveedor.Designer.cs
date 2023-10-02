@@ -46,6 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.DTPfinal = new System.Windows.Forms.DateTimePicker();
             this.DTPInicio = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CLBEmpresa = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -61,13 +63,13 @@
             this.panel1.Controls.Add(this.PictureBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1365, 52);
+            this.panel1.Size = new System.Drawing.Size(1146, 52);
             this.panel1.TabIndex = 8;
             // 
             // PictureBox3
             // 
             this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(1265, 12);
+            this.PictureBox3.Location = new System.Drawing.Point(1050, 13);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(41, 34);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,7 +82,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(340, 3);
+            this.label1.Location = new System.Drawing.Point(245, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(723, 43);
             this.label1.TabIndex = 8;
@@ -100,7 +102,7 @@
             // PictureBox2
             // 
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(1303, 4);
+            this.PictureBox2.Location = new System.Drawing.Point(1088, 5);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(58, 42);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,7 +134,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             this.DGVproveedores.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVproveedores.Size = new System.Drawing.Size(1204, 550);
+            this.DGVproveedores.Size = new System.Drawing.Size(1114, 382);
             this.DGVproveedores.TabIndex = 43;
             // 
             // TxtProveedor
@@ -158,7 +160,7 @@
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(1097, 98);
+            this.Button1.Location = new System.Drawing.Point(1007, 98);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(128, 58);
             this.Button1.TabIndex = 50;
@@ -169,7 +171,7 @@
             // BtnBuscarFecha
             // 
             this.BtnBuscarFecha.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscarFecha.Location = new System.Drawing.Point(691, 101);
+            this.BtnBuscarFecha.Location = new System.Drawing.Point(653, 98);
             this.BtnBuscarFecha.Name = "BtnBuscarFecha";
             this.BtnBuscarFecha.Size = new System.Drawing.Size(128, 52);
             this.BtnBuscarFecha.TabIndex = 62;
@@ -183,7 +185,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(401, 134);
+            this.label6.Location = new System.Drawing.Point(377, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(46, 18);
             this.label6.TabIndex = 61;
@@ -195,7 +197,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(401, 107);
+            this.label5.Location = new System.Drawing.Point(377, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 18);
             this.label5.TabIndex = 60;
@@ -207,7 +209,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(458, 79);
+            this.label3.Location = new System.Drawing.Point(434, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 23);
             this.label3.TabIndex = 59;
@@ -215,7 +217,7 @@
             // 
             // DTPfinal
             // 
-            this.DTPfinal.Location = new System.Drawing.Point(462, 131);
+            this.DTPfinal.Location = new System.Drawing.Point(438, 127);
             this.DTPfinal.Name = "DTPfinal";
             this.DTPfinal.Size = new System.Drawing.Size(200, 20);
             this.DTPfinal.TabIndex = 58;
@@ -223,18 +225,47 @@
             // 
             // DTPInicio
             // 
-            this.DTPInicio.Location = new System.Drawing.Point(462, 105);
+            this.DTPInicio.Location = new System.Drawing.Point(438, 101);
             this.DTPInicio.Name = "DTPInicio";
             this.DTPInicio.Size = new System.Drawing.Size(200, 20);
             this.DTPInicio.TabIndex = 57;
             this.DTPInicio.Value = new System.DateTime(2023, 9, 14, 0, 0, 0, 0);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(824, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(174, 25);
+            this.label7.TabIndex = 64;
+            this.label7.Text = " POR EMPRESA";
+            // 
+            // CLBEmpresa
+            // 
+            this.CLBEmpresa.CheckOnClick = true;
+            this.CLBEmpresa.FormattingEnabled = true;
+            this.CLBEmpresa.Items.AddRange(new object[] {
+            "CEDISUR",
+            "GICSSA",
+            "CIESSA"});
+            this.CLBEmpresa.Location = new System.Drawing.Point(829, 107);
+            this.CLBEmpresa.Name = "CLBEmpresa";
+            this.CLBEmpresa.Size = new System.Drawing.Size(129, 49);
+            this.CLBEmpresa.TabIndex = 63;
+            this.CLBEmpresa.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CLBEmpresa_ItemCheck);
+            this.CLBEmpresa.SelectedIndexChanged += new System.EventHandler(this.CLBEmpresa_SelectedIndexChanged);
             // 
             // SaldoPendienteProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1387, 749);
+            this.ClientSize = new System.Drawing.Size(1164, 576);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.CLBEmpresa);
             this.Controls.Add(this.BtnBuscarFecha);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -278,5 +309,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker DTPfinal;
         private System.Windows.Forms.DateTimePicker DTPInicio;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckedListBox CLBEmpresa;
     }
 }

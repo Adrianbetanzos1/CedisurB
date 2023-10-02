@@ -47,6 +47,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.BtnAgregar = new System.Windows.Forms.Button();
+            this.CLBEmpresa = new System.Windows.Forms.CheckedListBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -60,13 +62,13 @@
             this.panel1.Controls.Add(this.PictureBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1230, 52);
+            this.panel1.Size = new System.Drawing.Size(1131, 52);
             this.panel1.TabIndex = 2;
             // 
             // PictureBox3
             // 
             this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(1113, 11);
+            this.PictureBox3.Location = new System.Drawing.Point(1015, 11);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(41, 34);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -88,7 +90,7 @@
             // PictureBox2
             // 
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(1151, 3);
+            this.PictureBox2.Location = new System.Drawing.Point(1053, 3);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(58, 42);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,11 +101,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(369, 67);
+            this.label1.Location = new System.Drawing.Point(347, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(609, 59);
+            this.label1.Size = new System.Drawing.Size(444, 43);
             this.label1.TabIndex = 3;
             this.label1.Text = "AGREGAR PROVEEDOR";
             // 
@@ -148,7 +150,7 @@
             // 
             // TxtRfc
             // 
-            this.TxtRfc.Location = new System.Drawing.Point(90, 370);
+            this.TxtRfc.Location = new System.Drawing.Point(90, 325);
             this.TxtRfc.Name = "TxtRfc";
             this.TxtRfc.Size = new System.Drawing.Size(333, 20);
             this.TxtRfc.TabIndex = 9;
@@ -159,7 +161,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(85, 342);
+            this.label4.Location = new System.Drawing.Point(85, 297);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(252, 25);
             this.label4.TabIndex = 8;
@@ -167,7 +169,7 @@
             // 
             // DTPFecha
             // 
-            this.DTPFecha.Location = new System.Drawing.Point(950, 249);
+            this.DTPFecha.Location = new System.Drawing.Point(897, 249);
             this.DTPFecha.Name = "DTPFecha";
             this.DTPFecha.Size = new System.Drawing.Size(226, 20);
             this.DTPFecha.TabIndex = 10;
@@ -178,7 +180,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(945, 221);
+            this.label5.Location = new System.Drawing.Point(892, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(241, 25);
             this.label5.TabIndex = 11;
@@ -186,25 +188,29 @@
             // 
             // CbTipo
             // 
+            this.CbTipo.CheckOnClick = true;
             this.CbTipo.FormattingEnabled = true;
             this.CbTipo.Items.AddRange(new object[] {
             "Proveedor",
             "Acreedor"});
-            this.CbTipo.Location = new System.Drawing.Point(511, 366);
+            this.CbTipo.Location = new System.Drawing.Point(511, 321);
             this.CbTipo.Name = "CbTipo";
             this.CbTipo.Size = new System.Drawing.Size(179, 49);
             this.CbTipo.TabIndex = 12;
+            this.CbTipo.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CbTipo_ItemCheck);
             // 
             // CbMoneda
             // 
+            this.CbMoneda.CheckOnClick = true;
             this.CbMoneda.FormattingEnabled = true;
             this.CbMoneda.Items.AddRange(new object[] {
             "Peso mexicano",
             "Dolar americano"});
-            this.CbMoneda.Location = new System.Drawing.Point(950, 366);
+            this.CbMoneda.Location = new System.Drawing.Point(897, 337);
             this.CbMoneda.Name = "CbMoneda";
             this.CbMoneda.Size = new System.Drawing.Size(183, 49);
             this.CbMoneda.TabIndex = 13;
+            this.CbMoneda.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CbMoneda_ItemCheck);
             // 
             // label6
             // 
@@ -212,7 +218,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(506, 338);
+            this.label6.Location = new System.Drawing.Point(506, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 25);
             this.label6.TabIndex = 14;
@@ -224,7 +230,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(945, 338);
+            this.label7.Location = new System.Drawing.Point(892, 309);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(221, 25);
             this.label7.TabIndex = 15;
@@ -233,7 +239,7 @@
             // BtnAgregar
             // 
             this.BtnAgregar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.Location = new System.Drawing.Point(511, 451);
+            this.BtnAgregar.Location = new System.Drawing.Point(511, 414);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(128, 52);
             this.BtnAgregar.TabIndex = 9;
@@ -241,12 +247,40 @@
             this.BtnAgregar.UseVisualStyleBackColor = true;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
+            // CLBEmpresa
+            // 
+            this.CLBEmpresa.CheckOnClick = true;
+            this.CLBEmpresa.FormattingEnabled = true;
+            this.CLBEmpresa.Items.AddRange(new object[] {
+            "CEDISUR",
+            "CIESSA",
+            "GICSSA"});
+            this.CLBEmpresa.Location = new System.Drawing.Point(90, 414);
+            this.CLBEmpresa.Name = "CLBEmpresa";
+            this.CLBEmpresa.Size = new System.Drawing.Size(179, 49);
+            this.CLBEmpresa.TabIndex = 16;
+            this.CLBEmpresa.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CLBEmpresa_ItemCheck);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(85, 386);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(117, 25);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "EMPRESA";
+            // 
             // AgregarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1283, 720);
+            this.ClientSize = new System.Drawing.Size(1155, 514);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.CLBEmpresa);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -294,5 +328,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.PictureBox PictureBox3;
+        private System.Windows.Forms.CheckedListBox CLBEmpresa;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -26,6 +26,7 @@ namespace CedisurB
             DTPFecha.Value = DateTime.Now;
             CbTipo.ClearSelected();
             CbMoneda.ClearSelected();
+            CLBEmpresa.ClearSelected();
 
         }
 
@@ -66,7 +67,7 @@ namespace CedisurB
         {
             string nuevoID = TxtIDProveedor.Text;
 
-            if (string.IsNullOrEmpty(TxtIDProveedor.Text) || string.IsNullOrEmpty(TxtNombreProv.Text) || string.IsNullOrEmpty(TxtRfc.Text) || CbTipo.CheckedItems.Count == 0 || CbMoneda.CheckedItems.Count == 0)
+            if (string.IsNullOrEmpty(TxtIDProveedor.Text) || string.IsNullOrEmpty(TxtNombreProv.Text) || string.IsNullOrEmpty(TxtRfc.Text) || CbTipo.CheckedItems.Count == 0 || CbMoneda.CheckedItems.Count == 0 || CLBEmpresa.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Colocar los datos faltantes antes de continuar");
             }
@@ -75,7 +76,7 @@ namespace CedisurB
                 using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
                 {
                     //Se inicializa el sqlCommand
-                    SqlCommand cmd = new SqlCommand("Insert into Proveedor(ID_proveedor,RfcProveedor, nombreProveedor, fechaDeRegistro, TipoDeProveedor, TipoDePago) values (@id_proveedor,@RfcProveedor, @nombreProveedor, @fechaDeRegistro, @TipoDeProveedor, @TipoDePago)")
+                    SqlCommand cmd = new SqlCommand("Insert into Proveedor(ID_proveedor,RfcProveedor, nombreProveedor, fechaDeRegistro, TipoDeProveedor, TipoDePago, EmpresaAsoc) values (@id_proveedor,@RfcProveedor, @nombreProveedor, @fechaDeRegistro, @TipoDeProveedor, @TipoDePago,@empresaAsoc)")
                     {
                         CommandType = CommandType.Text,
                         Connection = conexion
@@ -86,6 +87,7 @@ namespace CedisurB
                     cmd.Parameters.AddWithValue("@fechaDeRegistro", DTPFecha.Value);
                     cmd.Parameters.AddWithValue("@TipoDeProveedor", CbTipo.SelectedItem);
                     cmd.Parameters.AddWithValue("@TipoDePago", CbMoneda.SelectedItem);
+                    cmd.Parameters.AddWithValue("@empresaAsoc", CLBEmpresa.SelectedItem);
 
                     if (ExisteIDEnBaseDeDatos(nuevoID))
                     {
@@ -131,6 +133,39 @@ namespace CedisurB
         private void PictureBox3_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void CLBEmpresa_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < CLBEmpresa.Items.Count; i++)
+            {
+                if (i != e.Index) // No desmarca la opción actual
+                {
+                    CLBEmpresa.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
+        }
+
+        private void CbTipo_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < CbTipo.Items.Count; i++)
+            {
+                if (i != e.Index) // No desmarca la opción actual
+                {
+                    CbTipo.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
+        }
+
+        private void CbMoneda_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            for (int i = 0; i < CbMoneda.Items.Count; i++)
+            {
+                if (i != e.Index) // No desmarca la opción actual
+                {
+                    CbMoneda.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
         }
     }
 }

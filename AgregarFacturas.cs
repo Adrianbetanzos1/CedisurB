@@ -26,7 +26,7 @@ namespace CedisurB
 
         private void LimpiarDatos()
         {
-
+            
             TxtIDProveedor.Clear();
             TxtNombreFactura.Clear();
             DTPFecha.Value = DateTime.Now;
@@ -41,6 +41,25 @@ namespace CedisurB
 
         }
 
+
+        static bool ExisteIDEnBaseDeDatos(string connectionString, string idAVerificar)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT COUNT(*) FROM Factura WHERE FacturaN = @id";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", idAVerificar);
+                    int count = (int)command.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+        }
+
+
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TxtNombreFactura.Text) || string.IsNullOrEmpty(TxtNumContrato.Text) || string.IsNullOrEmpty(TxtAbono.Text) || string.IsNullOrEmpty(TxtDiasVencimiento.Text) || string.IsNullOrEmpty(TxtImporte.Text) || string.IsNullOrEmpty(TxtImporteUSD.Text) || string.IsNullOrEmpty(TxtSaldoUSD.Text) || TxtDolar.Text == "")
@@ -54,6 +73,7 @@ namespace CedisurB
             }
             else if (MessageBox.Show("Estas seguro que deseas agregar esta factura? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+
                 using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
                 {
                     SqlCommand cmd = new SqlCommand("Insert into Factura(facturaN, fechaFactura, diasVencimiento, importeMXP,importeUSD, abono, saldoMXP, saldoUSD,numContrato, ID_proveedor, TipoDeCambio, SaldoAnterior, SaldoAnteriorUSD,AbonoAnterior) values (@facturaN, @fechaFactura, @diasVencimiento, @importe,@importeUSD, @abono, @saldoMXP, @saldoUSD, @numContrato, @ID_proveedor,@TipoDeCambio, @saldoAnterior, @saldoAnteriorUSD, @abonoAnterior)")
@@ -78,19 +98,31 @@ namespace CedisurB
                     cmd.Parameters.AddWithValue("@saldoAnteriorUSD", float.Parse(TxtSaldoUSD.Text).ToString("F2"));
                     cmd.Parameters.AddWithValue("@abonoAnterior", float.Parse(TxtAbono.Text).ToString("F2"));
 
-                    conexion.Open();
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Registro agregado correctamente");
-                    conexion.Close();
-                    LimpiarDatos();
-                    this.Close();
-                    VerFacturas ver = new VerFacturas();
-                    ver.Show();
+                    string idAVerificar = TxtNombreFactura.Text;
+                    string conection = "Server=DESKTOP-717JV41\\SQLEXPRESS; Database = Cedisur; integrated security = true";
+                    if (ExisteIDEnBaseDeDatos(conection, idAVerificar))
+                    {
+                        MessageBox.Show("Ya existe ese nombre de factura y no se puede repetir");
+                    }
+                    else
+                    {
+                        conexion.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Registro agregado correctamente");
+                        conexion.Close();
+                        LimpiarDatos();
+                        this.Close();
+                        VerFacturas ver = new VerFacturas();
+                        ver.Show();
+                    }
+                        
+                   
                 }
                     
             }
         }
 
+       
         //Botón para calcular el saldo restante de la factura
         private void TxtAbono_Leave_1(object sender, EventArgs e)
         {
@@ -98,6 +130,11 @@ namespace CedisurB
             {
                 MessageBox.Show("Ingrese un valor númerico");
                 TxtAbono.Focus();
+            }
+            else if(string.IsNullOrEmpty(TxtImporte.Text))
+            {
+                MessageBox.Show("Debes colocar un importe antes de colocar el abono");
+                TxtImporte.Focus();
             }
             else if (string.IsNullOrEmpty(TxtAbono.Text))
             {
@@ -121,6 +158,7 @@ namespace CedisurB
         //Al iniciar el formulario, se genera el número de factura
         private void AgregarFacturas_Load_1(object sender, EventArgs e)
         {
+            
             List<int> generatedNumbers = new List<int>();
             Random random = new Random();
             int newNumber = random.Next(10000, 100000);
@@ -212,6 +250,11 @@ namespace CedisurB
         private void PictureBox3_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void TxtNumContrato_Leave(object sender, EventArgs e)
+        {
+            TxtDiasVencimiento.Focus();
         }
     }
 }

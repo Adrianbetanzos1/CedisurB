@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SumaFacturas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,13 +60,13 @@
             this.panel1.Controls.Add(this.PictureBox2);
             this.panel1.Location = new System.Drawing.Point(10, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1365, 52);
+            this.panel1.Size = new System.Drawing.Size(1162, 52);
             this.panel1.TabIndex = 10;
             // 
             // PictureBox3
             // 
             this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(1265, 12);
+            this.PictureBox3.Location = new System.Drawing.Point(1045, 13);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(41, 34);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -79,7 +79,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(429, 3);
+            this.label1.Location = new System.Drawing.Point(341, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(430, 43);
             this.label1.TabIndex = 8;
@@ -99,7 +99,7 @@
             // PictureBox2
             // 
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(1303, 4);
+            this.PictureBox2.Location = new System.Drawing.Point(1083, 5);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(58, 42);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,30 +114,30 @@
             this.DGVproveedores.AllowUserToResizeColumns = false;
             this.DGVproveedores.AllowUserToResizeRows = false;
             this.DGVproveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVproveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVproveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DGVproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVproveedores.Location = new System.Drawing.Point(46, 126);
+            this.DGVproveedores.Location = new System.Drawing.Point(12, 126);
             this.DGVproveedores.Name = "DGVproveedores";
             this.DGVproveedores.ReadOnly = true;
             this.DGVproveedores.RowHeadersVisible = false;
             this.DGVproveedores.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            this.DGVproveedores.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            this.DGVproveedores.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.DGVproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVproveedores.Size = new System.Drawing.Size(551, 529);
+            this.DGVproveedores.Size = new System.Drawing.Size(480, 372);
             this.DGVproveedores.TabIndex = 64;
             this.DGVproveedores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVproveedores_CellDoubleClick);
             // 
             // TxtSuma
             // 
-            this.TxtSuma.Location = new System.Drawing.Point(819, 700);
+            this.TxtSuma.Location = new System.Drawing.Point(590, 541);
             this.TxtSuma.Name = "TxtSuma";
             this.TxtSuma.Size = new System.Drawing.Size(239, 20);
             this.TxtSuma.TabIndex = 65;
@@ -148,7 +148,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(675, 696);
+            this.label3.Location = new System.Drawing.Point(446, 537);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 23);
             this.label3.TabIndex = 67;
@@ -157,7 +157,7 @@
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(1102, 679);
+            this.Button1.Location = new System.Drawing.Point(873, 520);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(128, 58);
             this.Button1.TabIndex = 68;
@@ -172,30 +172,30 @@
             this.DGVProveedor1.AllowUserToResizeColumns = false;
             this.DGVProveedor1.AllowUserToResizeRows = false;
             this.DGVProveedor1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVProveedor1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVProveedor1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DGVProveedor1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVProveedor1.Location = new System.Drawing.Point(679, 126);
+            this.DGVProveedor1.Location = new System.Drawing.Point(543, 126);
             this.DGVProveedor1.Name = "DGVProveedor1";
             this.DGVProveedor1.ReadOnly = true;
             this.DGVProveedor1.RowHeadersVisible = false;
             this.DGVProveedor1.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            this.DGVProveedor1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            this.DGVProveedor1.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.DGVProveedor1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVProveedor1.Size = new System.Drawing.Size(551, 529);
+            this.DGVProveedor1.Size = new System.Drawing.Size(458, 372);
             this.DGVProveedor1.TabIndex = 69;
             // 
             // Button2
             // 
             this.Button2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button2.Location = new System.Drawing.Point(1243, 126);
+            this.Button2.Location = new System.Drawing.Point(1023, 126);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(128, 58);
             this.Button2.TabIndex = 70;
@@ -208,7 +208,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1387, 749);
+            this.ClientSize = new System.Drawing.Size(1181, 590);
             this.Controls.Add(this.Button2);
             this.Controls.Add(this.DGVProveedor1);
             this.Controls.Add(this.Button1);

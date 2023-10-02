@@ -43,24 +43,24 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(757, 52);
+            this.panel1.Size = new System.Drawing.Size(603, 52);
             this.panel1.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Rockwell", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(114, 5);
+            this.label1.Location = new System.Drawing.Point(95, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(477, 43);
+            this.label1.Size = new System.Drawing.Size(433, 39);
             this.label1.TabIndex = 8;
             this.label1.Text = "SELECCION DE EMPRESA";
             // 
             // BtnCedisur
             // 
             this.BtnCedisur.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCedisur.Location = new System.Drawing.Point(134, 164);
+            this.BtnCedisur.Location = new System.Drawing.Point(60, 155);
             this.BtnCedisur.Name = "BtnCedisur";
             this.BtnCedisur.Size = new System.Drawing.Size(128, 58);
             this.BtnCedisur.TabIndex = 71;
@@ -71,7 +71,7 @@
             // BtnCiessa
             // 
             this.BtnCiessa.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCiessa.Location = new System.Drawing.Point(305, 164);
+            this.BtnCiessa.Location = new System.Drawing.Point(231, 155);
             this.BtnCiessa.Name = "BtnCiessa";
             this.BtnCiessa.Size = new System.Drawing.Size(128, 58);
             this.BtnCiessa.TabIndex = 72;
@@ -82,7 +82,7 @@
             // BtnGicsa
             // 
             this.BtnGicsa.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGicsa.Location = new System.Drawing.Point(475, 164);
+            this.BtnGicsa.Location = new System.Drawing.Point(401, 155);
             this.BtnGicsa.Name = "BtnGicsa";
             this.BtnGicsa.Size = new System.Drawing.Size(128, 58);
             this.BtnGicsa.TabIndex = 73;
@@ -95,7 +95,7 @@
             this.LblTexto.AutoSize = true;
             this.LblTexto.Font = new System.Drawing.Font("Rockwell", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTexto.ForeColor = System.Drawing.SystemColors.Control;
-            this.LblTexto.Location = new System.Drawing.Point(131, 125);
+            this.LblTexto.Location = new System.Drawing.Point(57, 116);
             this.LblTexto.Name = "LblTexto";
             this.LblTexto.Size = new System.Drawing.Size(17, 18);
             this.LblTexto.TabIndex = 74;
@@ -106,7 +106,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(779, 329);
+            this.ClientSize = new System.Drawing.Size(651, 305);
             this.Controls.Add(this.LblTexto);
             this.Controls.Add(this.BtnGicsa);
             this.Controls.Add(this.BtnCiessa);

@@ -17,7 +17,7 @@ namespace CedisurB
     {
         private int suma = 0;
         readonly DataTable dt = new DataTable();
-        private readonly HashSet<int> valoresUnicos = new HashSet<int>();
+        private readonly HashSet<string> valoresUnicos = new HashSet<string>();
         public SumaFacturas()
         {
             InitializeComponent();
@@ -51,7 +51,7 @@ namespace CedisurB
                 int valorCelda = Convert.ToInt32(celdaSeleccionada.Value);
 
                 DataGridViewCell celdaSeleccionadaFactura = DGVproveedores.Rows[e.RowIndex].Cells[2];
-                int valorCeldaFactura = Convert.ToInt32(celdaSeleccionadaFactura.Value);
+                string valorCeldaFactura = Convert.ToString(celdaSeleccionadaFactura.Value);
 
                 if (valoresUnicos.Contains(valorCeldaFactura))
                 {
@@ -61,7 +61,7 @@ namespace CedisurB
                 {
                     // Agregar el nuevo valor de la celda seleccionada
                     suma += valorCelda;
-                    valoresUnicos.Add(valorCelda);
+                    valoresUnicos.Add(valorCeldaFactura);
                     // Actualizar el TextBox de suma con la nueva suma
                     TxtSuma.Text = "$" + suma.ToString();
 
@@ -127,7 +127,7 @@ namespace CedisurB
 
                 // Obtener el valor de la celda "Valor" de la fila seleccionada
                 int valorCelda = Convert.ToInt32(filaSeleccionada.Cells["saldoMXP"].Value);
-
+                string valorCeldaFactura = Convert.ToString(filaSeleccionada.Cells["FacturaN"].Value);
                 // Restar el valor de la fila eliminada de la suma total
                 suma -= valorCelda;
 
@@ -136,7 +136,7 @@ namespace CedisurB
 
                 // Eliminar la fila seleccionada del DataGridView de registros seleccionados
                 DGVProveedor1.Rows.Remove(filaSeleccionada);
-
+                valoresUnicos.Remove(valorCeldaFactura);
 
             }
             
@@ -167,6 +167,8 @@ namespace CedisurB
             return dataTable;
         }
 
+
+        //Manda a llamar a la pantalla emergente para generear un reporte
         DataTable datosInforme = new DataTable();
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -186,7 +188,7 @@ namespace CedisurB
         private void ShowCustomMessageBox()
         {
             SeleccionEmpresas customMessageBox = new SeleccionEmpresas();
-            customMessageBox.Eleccion("Seleccione el diseño para el formato del reporte:", "CEDISUR", "CIESSA", "GICSA");
+            customMessageBox.Eleccion("Seleccione el diseño para el formato del reporte:", "CEDISUR", "CIESSA", "GICSSA");
 
             customMessageBox.ShowDialog();
             int selectedOption = customMessageBox.SelectedOption;
@@ -195,7 +197,6 @@ namespace CedisurB
             {
                 ReporteSumaSaldosCedisur formularioViewer = new ReporteSumaSaldosCedisur(datosInforme);
                 formularioViewer.Show();
-
             }
             else if (selectedOption == 2)
             {

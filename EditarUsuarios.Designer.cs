@@ -61,13 +61,13 @@
             this.panel1.Controls.Add(this.PictureBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1291, 52);
+            this.panel1.Size = new System.Drawing.Size(1110, 52);
             this.panel1.TabIndex = 8;
             // 
             // PictureBox3
             // 
             this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(1174, 3);
+            this.PictureBox3.Location = new System.Drawing.Point(1002, 15);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(41, 34);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +89,7 @@
             // PictureBox2
             // 
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(1216, 3);
+            this.PictureBox2.Location = new System.Drawing.Point(1049, 7);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(58, 42);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -100,7 +100,7 @@
             // BtnAgregar
             // 
             this.BtnAgregar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.Location = new System.Drawing.Point(511, 554);
+            this.BtnAgregar.Location = new System.Drawing.Point(451, 379);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(128, 52);
             this.BtnAgregar.TabIndex = 36;
@@ -114,7 +114,7 @@
             this.CbTipoAutorizacion.Items.AddRange(new object[] {
             "Administrador",
             "Usuario"});
-            this.CbTipoAutorizacion.Location = new System.Drawing.Point(958, 447);
+            this.CbTipoAutorizacion.Location = new System.Drawing.Point(824, 270);
             this.CbTipoAutorizacion.Name = "CbTipoAutorizacion";
             this.CbTipoAutorizacion.Size = new System.Drawing.Size(179, 49);
             this.CbTipoAutorizacion.TabIndex = 35;
@@ -125,7 +125,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(953, 419);
+            this.label6.Location = new System.Drawing.Point(819, 242);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(274, 25);
             this.label6.TabIndex = 34;
@@ -133,9 +133,9 @@
             // 
             // TxtEmail
             // 
-            this.TxtEmail.Location = new System.Drawing.Point(958, 326);
+            this.TxtEmail.Location = new System.Drawing.Point(824, 205);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(316, 20);
+            this.TxtEmail.Size = new System.Drawing.Size(278, 20);
             this.TxtEmail.TabIndex = 33;
             // 
             // label7
@@ -144,7 +144,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(953, 298);
+            this.label7.Location = new System.Drawing.Point(819, 177);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 25);
             this.label7.TabIndex = 32;
@@ -152,7 +152,7 @@
             // 
             // TxtConfirmar
             // 
-            this.TxtConfirmar.Location = new System.Drawing.Point(511, 447);
+            this.TxtConfirmar.Location = new System.Drawing.Point(432, 296);
             this.TxtConfirmar.Name = "TxtConfirmar";
             this.TxtConfirmar.PasswordChar = '*';
             this.TxtConfirmar.Size = new System.Drawing.Size(333, 20);
@@ -164,7 +164,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(506, 419);
+            this.label3.Location = new System.Drawing.Point(427, 268);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(309, 25);
             this.label3.TabIndex = 30;
@@ -172,7 +172,7 @@
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(511, 326);
+            this.TxtNombre.Location = new System.Drawing.Point(432, 206);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(333, 20);
             this.TxtNombre.TabIndex = 29;
@@ -183,7 +183,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(506, 298);
+            this.label5.Location = new System.Drawing.Point(427, 178);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(249, 25);
             this.label5.TabIndex = 28;
@@ -191,7 +191,7 @@
             // 
             // TxtContraseña
             // 
-            this.TxtContraseña.Location = new System.Drawing.Point(58, 447);
+            this.TxtContraseña.Location = new System.Drawing.Point(40, 296);
             this.TxtContraseña.Name = "TxtContraseña";
             this.TxtContraseña.Size = new System.Drawing.Size(333, 20);
             this.TxtContraseña.TabIndex = 27;
@@ -202,7 +202,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(53, 419);
+            this.label4.Location = new System.Drawing.Point(35, 268);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 25);
             this.label4.TabIndex = 26;
@@ -210,7 +210,7 @@
             // 
             // TxtNombreCompleto
             // 
-            this.TxtNombreCompleto.Location = new System.Drawing.Point(58, 326);
+            this.TxtNombreCompleto.Location = new System.Drawing.Point(40, 207);
             this.TxtNombreCompleto.Name = "TxtNombreCompleto";
             this.TxtNombreCompleto.Size = new System.Drawing.Size(333, 20);
             this.TxtNombreCompleto.TabIndex = 25;
@@ -221,7 +221,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(53, 298);
+            this.label2.Location = new System.Drawing.Point(35, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(248, 25);
             this.label2.TabIndex = 24;
@@ -230,11 +230,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(462, 110);
+            this.label1.Location = new System.Drawing.Point(406, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(447, 59);
+            this.label1.Size = new System.Drawing.Size(330, 43);
             this.label1.TabIndex = 23;
             this.label1.Text = "EDITAR USUARIO";
             // 
@@ -251,7 +251,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1317, 720);
+            this.ClientSize = new System.Drawing.Size(1134, 521);
             this.Controls.Add(this.TxtIDUsuario);
             this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.CbTipoAutorizacion);

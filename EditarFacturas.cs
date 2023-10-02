@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CedisurB
@@ -37,8 +30,8 @@ namespace CedisurB
             string query = "update Cedisur.dbo.Factura set facturaN='" + TxtNombreFactura.Text + "', " +
                 "fechaFactura=CAST('" + selectedDate + "' as datetime), diasVencimiento='" + TxtDiasVencimiento.Text + "'," +
                 "importeMXP='" + float.Parse(TxtImporte.Text).ToString("F2") + "', importeUSD='" + float.Parse(TxtImporteUSD.Text).ToString("F2") + "', abono='" + float.Parse(TxtAbono.Text).ToString("F2") + "'," +
-                "saldoMXP='" + float.Parse(TxtSaldoMXP.Text).ToString("F2") + "', saldoUSD='" + float.Parse(TxtSaldoUSD.Text).ToString("F2") + "', SaldoAnterior= '" + float.Parse(TxtSaldoMXP.Text).ToString("F2") + "', " +
-                "SaldoAnteriorUSD= '" + float.Parse(TxtSaldoUSD.Text).ToString("F2") + "', AbonoAnterior= '" + float.Parse(TxtAbono.Text).ToString("F2") + "' where  ID_factura= '" + TxtIdFactura.Text + "'";
+                "saldoMXP='" + float.Parse(TxtSaldoMXP.Text).ToString("F2") + "', saldoUSD='" + float.Parse(TxtSaldoUSD.Text).ToString("F2") + "', numContrato='"+TxtNumContrato.Text+"', SaldoAnterior= '" + float.Parse(TxtSaldoMXP.Text).ToString("F2") + "', " +
+                "SaldoAnteriorUSD= '" + float.Parse(TxtSaldoUSD.Text).ToString("F2") + "', AbonoAnterior= '" + float.Parse(TxtAbono.Text).ToString("F2") + "' where  FacturaN= '" + TxtNombreFactura.Text + "'";
             SqlCommand comando = new SqlCommand(query, conexion);
             int cant;
             cant = comando.ExecuteNonQuery();

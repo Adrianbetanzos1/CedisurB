@@ -70,11 +70,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(353, 87);
+            this.label1.Location = new System.Drawing.Point(344, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(524, 59);
+            this.label1.Size = new System.Drawing.Size(383, 43);
             this.label1.TabIndex = 7;
             this.label1.Text = "AGREGAR FACTURA";
             // 
@@ -86,13 +86,13 @@
             this.panel1.Controls.Add(this.PictureBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1298, 52);
+            this.panel1.Size = new System.Drawing.Size(1197, 52);
             this.panel1.TabIndex = 6;
             // 
             // PictureBox3
             // 
             this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(1190, 7);
+            this.PictureBox3.Location = new System.Drawing.Point(1074, 7);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(41, 34);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,7 +114,7 @@
             // PictureBox2
             // 
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(1237, 7);
+            this.PictureBox2.Location = new System.Drawing.Point(1121, 7);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(58, 42);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -125,7 +125,7 @@
             // TxtNombrePro
             // 
             this.TxtNombrePro.Enabled = false;
-            this.TxtNombrePro.Location = new System.Drawing.Point(485, 271);
+            this.TxtNombrePro.Location = new System.Drawing.Point(462, 196);
             this.TxtNombrePro.Name = "TxtNombrePro";
             this.TxtNombrePro.Size = new System.Drawing.Size(333, 20);
             this.TxtNombrePro.TabIndex = 11;
@@ -136,7 +136,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(480, 243);
+            this.label3.Location = new System.Drawing.Point(457, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(308, 25);
             this.label3.TabIndex = 10;
@@ -145,7 +145,7 @@
             // TxtIDProveedor
             // 
             this.TxtIDProveedor.Enabled = false;
-            this.TxtIDProveedor.Location = new System.Drawing.Point(64, 271);
+            this.TxtIDProveedor.Location = new System.Drawing.Point(41, 196);
             this.TxtIDProveedor.Name = "TxtIDProveedor";
             this.TxtIDProveedor.Size = new System.Drawing.Size(333, 20);
             this.TxtIDProveedor.TabIndex = 9;
@@ -156,7 +156,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(59, 243);
+            this.label2.Location = new System.Drawing.Point(36, 168);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(232, 25);
             this.label2.TabIndex = 8;
@@ -165,7 +165,7 @@
             // TxtSaldoUSD
             // 
             this.TxtSaldoUSD.Enabled = false;
-            this.TxtSaldoUSD.Location = new System.Drawing.Point(485, 647);
+            this.TxtSaldoUSD.Location = new System.Drawing.Point(467, 573);
             this.TxtSaldoUSD.Name = "TxtSaldoUSD";
             this.TxtSaldoUSD.Size = new System.Drawing.Size(333, 20);
             this.TxtSaldoUSD.TabIndex = 15;
@@ -176,7 +176,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(480, 619);
+            this.label4.Location = new System.Drawing.Point(462, 545);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 25);
             this.label4.TabIndex = 14;
@@ -184,7 +184,7 @@
             // 
             // TxtNombreFactura
             // 
-            this.TxtNombreFactura.Location = new System.Drawing.Point(64, 446);
+            this.TxtNombreFactura.Location = new System.Drawing.Point(46, 372);
             this.TxtNombreFactura.Name = "TxtNombreFactura";
             this.TxtNombreFactura.Size = new System.Drawing.Size(333, 20);
             this.TxtNombreFactura.TabIndex = 13;
@@ -195,7 +195,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(59, 418);
+            this.label5.Location = new System.Drawing.Point(41, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(291, 25);
             this.label5.TabIndex = 12;
@@ -204,7 +204,7 @@
             // TxtImporteUSD
             // 
             this.TxtImporteUSD.Enabled = false;
-            this.TxtImporteUSD.Location = new System.Drawing.Point(485, 542);
+            this.TxtImporteUSD.Location = new System.Drawing.Point(467, 468);
             this.TxtImporteUSD.Name = "TxtImporteUSD";
             this.TxtImporteUSD.Size = new System.Drawing.Size(333, 20);
             this.TxtImporteUSD.TabIndex = 19;
@@ -215,7 +215,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(480, 514);
+            this.label6.Location = new System.Drawing.Point(462, 440);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(164, 25);
             this.label6.TabIndex = 18;
@@ -223,7 +223,7 @@
             // 
             // TxtImporte
             // 
-            this.TxtImporte.Location = new System.Drawing.Point(64, 542);
+            this.TxtImporte.Location = new System.Drawing.Point(46, 468);
             this.TxtImporte.Name = "TxtImporte";
             this.TxtImporte.Size = new System.Drawing.Size(333, 20);
             this.TxtImporte.TabIndex = 17;
@@ -235,7 +235,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(59, 514);
+            this.label7.Location = new System.Drawing.Point(41, 440);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(174, 25);
             this.label7.TabIndex = 16;
@@ -243,7 +243,7 @@
             // 
             // TxtAbono
             // 
-            this.TxtAbono.Location = new System.Drawing.Point(904, 542);
+            this.TxtAbono.Location = new System.Drawing.Point(854, 372);
             this.TxtAbono.Name = "TxtAbono";
             this.TxtAbono.Size = new System.Drawing.Size(333, 20);
             this.TxtAbono.TabIndex = 23;
@@ -255,7 +255,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(899, 514);
+            this.label8.Location = new System.Drawing.Point(849, 344);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 25);
             this.label8.TabIndex = 22;
@@ -263,7 +263,7 @@
             // 
             // TxtDiasVencimiento
             // 
-            this.TxtDiasVencimiento.Location = new System.Drawing.Point(904, 446);
+            this.TxtDiasVencimiento.Location = new System.Drawing.Point(854, 284);
             this.TxtDiasVencimiento.Name = "TxtDiasVencimiento";
             this.TxtDiasVencimiento.Size = new System.Drawing.Size(333, 20);
             this.TxtDiasVencimiento.TabIndex = 21;
@@ -275,7 +275,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(899, 418);
+            this.label9.Location = new System.Drawing.Point(849, 256);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(267, 25);
             this.label9.TabIndex = 20;
@@ -284,7 +284,7 @@
             // TxtSaldoMXP
             // 
             this.TxtSaldoMXP.Enabled = false;
-            this.TxtSaldoMXP.Location = new System.Drawing.Point(64, 647);
+            this.TxtSaldoMXP.Location = new System.Drawing.Point(46, 573);
             this.TxtSaldoMXP.Name = "TxtSaldoMXP";
             this.TxtSaldoMXP.Size = new System.Drawing.Size(333, 20);
             this.TxtSaldoMXP.TabIndex = 25;
@@ -295,7 +295,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(59, 619);
+            this.label11.Location = new System.Drawing.Point(41, 545);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(144, 25);
             this.label11.TabIndex = 24;
@@ -304,11 +304,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Rockwell", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Location = new System.Drawing.Point(54, 316);
+            this.label10.Location = new System.Drawing.Point(38, 256);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(303, 59);
+            this.label10.Size = new System.Drawing.Size(218, 43);
             this.label10.TabIndex = 26;
             this.label10.Text = "Provisiones";
             // 
@@ -318,7 +318,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(475, 418);
+            this.label12.Location = new System.Drawing.Point(457, 344);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(290, 25);
             this.label12.TabIndex = 28;
@@ -326,14 +326,14 @@
             // 
             // DTPFecha
             // 
-            this.DTPFecha.Location = new System.Drawing.Point(480, 446);
+            this.DTPFecha.Location = new System.Drawing.Point(462, 372);
             this.DTPFecha.Name = "DTPFecha";
             this.DTPFecha.Size = new System.Drawing.Size(338, 20);
             this.DTPFecha.TabIndex = 27;
             // 
             // TxtDolar
             // 
-            this.TxtDolar.Location = new System.Drawing.Point(937, 126);
+            this.TxtDolar.Location = new System.Drawing.Point(833, 126);
             this.TxtDolar.Name = "TxtDolar";
             this.TxtDolar.Size = new System.Drawing.Size(333, 20);
             this.TxtDolar.TabIndex = 30;
@@ -345,7 +345,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(1051, 98);
+            this.label13.Location = new System.Drawing.Point(947, 98);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(108, 25);
             this.label13.TabIndex = 29;
@@ -354,7 +354,7 @@
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(1046, 152);
+            this.Button1.Location = new System.Drawing.Point(942, 152);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(130, 25);
             this.Button1.TabIndex = 9;
@@ -368,7 +368,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9.75F);
             this.label21.ForeColor = System.Drawing.Color.Transparent;
-            this.label21.Location = new System.Drawing.Point(934, 189);
+            this.label21.Location = new System.Drawing.Point(830, 189);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(104, 17);
             this.label21.TabIndex = 31;
@@ -377,7 +377,7 @@
             // BtnAgregar
             // 
             this.BtnAgregar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.Location = new System.Drawing.Point(904, 615);
+            this.BtnAgregar.Location = new System.Drawing.Point(854, 468);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(128, 52);
             this.BtnAgregar.TabIndex = 32;
@@ -387,10 +387,11 @@
             // 
             // TxtNumContrato
             // 
-            this.TxtNumContrato.Location = new System.Drawing.Point(485, 359);
+            this.TxtNumContrato.Location = new System.Drawing.Point(462, 284);
             this.TxtNumContrato.Name = "TxtNumContrato";
             this.TxtNumContrato.Size = new System.Drawing.Size(333, 20);
             this.TxtNumContrato.TabIndex = 35;
+            this.TxtNumContrato.Leave += new System.EventHandler(this.TxtNumContrato_Leave);
             // 
             // label14
             // 
@@ -398,7 +399,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Transparent;
-            this.label14.Location = new System.Drawing.Point(480, 331);
+            this.label14.Location = new System.Drawing.Point(457, 256);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(325, 25);
             this.label14.TabIndex = 34;
@@ -409,7 +410,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1320, 720);
+            this.ClientSize = new System.Drawing.Size(1215, 612);
             this.Controls.Add(this.TxtNumContrato);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.BtnAgregar);
@@ -442,7 +443,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AgregarFacturas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AgregarFacturas";
             this.Load += new System.EventHandler(this.AgregarFacturas_Load_1);
             this.panel1.ResumeLayout(false);

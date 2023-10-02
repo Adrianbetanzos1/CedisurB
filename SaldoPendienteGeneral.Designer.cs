@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaldoPendienteGeneral));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +45,8 @@
             this.DGVproveedores = new System.Windows.Forms.DataGridView();
             this.Button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CLBEmpresa = new System.Windows.Forms.CheckedListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
@@ -60,13 +62,13 @@
             this.panel1.Controls.Add(this.PictureBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1365, 52);
+            this.panel1.Size = new System.Drawing.Size(1155, 52);
             this.panel1.TabIndex = 9;
             // 
             // PictureBox3
             // 
             this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(1265, 12);
+            this.PictureBox3.Location = new System.Drawing.Point(1053, 12);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(41, 34);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -79,7 +81,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(429, 3);
+            this.label1.Location = new System.Drawing.Point(395, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(430, 43);
             this.label1.TabIndex = 8;
@@ -99,7 +101,7 @@
             // PictureBox2
             // 
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(1303, 4);
+            this.PictureBox2.Location = new System.Drawing.Point(1091, 4);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(58, 42);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -177,30 +179,30 @@
             this.DGVproveedores.AllowUserToResizeColumns = false;
             this.DGVproveedores.AllowUserToResizeRows = false;
             this.DGVproveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVproveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVproveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVproveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVproveedores.Location = new System.Drawing.Point(28, 171);
             this.DGVproveedores.Name = "DGVproveedores";
             this.DGVproveedores.ReadOnly = true;
             this.DGVproveedores.RowHeadersVisible = false;
             this.DGVproveedores.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
-            this.DGVproveedores.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
+            this.DGVproveedores.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVproveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVproveedores.Size = new System.Drawing.Size(1204, 550);
+            this.DGVproveedores.Size = new System.Drawing.Size(1110, 410);
             this.DGVproveedores.TabIndex = 63;
             // 
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(1104, 99);
+            this.Button1.Location = new System.Drawing.Point(1010, 96);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(128, 58);
             this.Button1.TabIndex = 51;
@@ -211,7 +213,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1249, 171);
+            this.button2.Location = new System.Drawing.Point(857, 96);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 58);
             this.button2.TabIndex = 70;
@@ -219,12 +221,41 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(472, 73);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(174, 25);
+            this.label7.TabIndex = 72;
+            this.label7.Text = " POR EMPRESA";
+            // 
+            // CLBEmpresa
+            // 
+            this.CLBEmpresa.CheckOnClick = true;
+            this.CLBEmpresa.FormattingEnabled = true;
+            this.CLBEmpresa.Items.AddRange(new object[] {
+            "CEDISUR",
+            "GICSSA",
+            "CIESSA"});
+            this.CLBEmpresa.Location = new System.Drawing.Point(504, 101);
+            this.CLBEmpresa.Name = "CLBEmpresa";
+            this.CLBEmpresa.Size = new System.Drawing.Size(129, 49);
+            this.CLBEmpresa.TabIndex = 71;
+            this.CLBEmpresa.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.CLBEmpresa_ItemCheck);
+            this.CLBEmpresa.SelectedIndexChanged += new System.EventHandler(this.CLBEmpresa_SelectedIndexChanged);
+            // 
             // SaldoPendienteGeneral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1387, 749);
+            this.ClientSize = new System.Drawing.Size(1174, 592);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.CLBEmpresa);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.BtnBuscarFecha);
@@ -266,5 +297,7 @@
         public System.Windows.Forms.DataGridView DGVproveedores;
         private System.Windows.Forms.Button Button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckedListBox CLBEmpresa;
     }
 }

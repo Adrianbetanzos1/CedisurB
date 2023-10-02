@@ -56,13 +56,13 @@
             this.panel1.Controls.Add(this.PictureBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1352, 52);
+            this.panel1.Size = new System.Drawing.Size(1148, 52);
             this.panel1.TabIndex = 9;
             // 
             // PictureBox3
             // 
             this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
-            this.PictureBox3.Location = new System.Drawing.Point(1227, 11);
+            this.PictureBox3.Location = new System.Drawing.Point(1024, 8);
             this.PictureBox3.Name = "PictureBox3";
             this.PictureBox3.Size = new System.Drawing.Size(41, 34);
             this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -75,7 +75,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(506, 3);
+            this.label1.Location = new System.Drawing.Point(421, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(367, 43);
             this.label1.TabIndex = 8;
@@ -95,7 +95,7 @@
             // PictureBox2
             // 
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(1274, 3);
+            this.PictureBox2.Location = new System.Drawing.Point(1071, 0);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(58, 42);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -127,7 +127,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             this.DGVpagos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVpagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVpagos.Size = new System.Drawing.Size(1178, 392);
+            this.DGVpagos.Size = new System.Drawing.Size(948, 392);
             this.DGVpagos.TabIndex = 46;
             // 
             // BtnBuscar
@@ -163,7 +163,7 @@
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(1233, 159);
+            this.Button1.Location = new System.Drawing.Point(1013, 159);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(128, 58);
             this.Button1.TabIndex = 50;
@@ -176,7 +176,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(1373, 661);
+            this.ClientSize = new System.Drawing.Size(1172, 566);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.TxtBusqueda);
