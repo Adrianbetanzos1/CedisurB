@@ -7,7 +7,7 @@ namespace CedisurB
 {
     public partial class VerUsuarios : Form
     {
-        private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS ; database=cedisur ; integrated security = true");
+        private readonly SqlConnection conexion = new SqlConnection("server=SERVERDES ; database=cedisur ; integrated security = true");
 
         public VerUsuarios()
         {

@@ -204,6 +204,7 @@
             this.DGVfacturas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVfacturas.Size = new System.Drawing.Size(1099, 402);
             this.DGVfacturas.TabIndex = 45;
+            this.DGVfacturas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVfacturas_CellContentClick);
             this.DGVfacturas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DGVfacturas_CellFormatting);
             // 
             // BtnReporte

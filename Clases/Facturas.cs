@@ -34,7 +34,7 @@ namespace CedisurB.Clases
         public static DataTable MostrarFactura()
         {
 
-            using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+            using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
             {
                 SqlDataAdapter da = new SqlDataAdapter("DT_MostrarFacturasB", conexion);
 
@@ -49,7 +49,7 @@ namespace CedisurB.Clases
 
         public static DataTable Mostrar(string args)
         {
-            using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+            using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
             {
                 conexion.Open();
                 string consulta = "Select FacturaN, fechaFactura, diasVencimiento, importeMXP, importeUSD, abono, saldoMXP, saldoUSD, nombreProveedor, TipoDeCambio from Factura inner join Proveedor on Factura.ID_Proveedor = Proveedor.ID_proveedor where FacturaN like '%" + args + "%'";
@@ -68,7 +68,7 @@ namespace CedisurB.Clases
 
         public static DataTable MostrarIDProveedor(string args)
         {
-            using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+            using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
             {   
                 string consulta = "Select FacturaN, fechaFactura, diasVencimiento, importeMXP, importeUSD, abono, saldoMXP, saldoUSD, Proveedor.nombreProveedor, TipoDeCambio from Factura inner join Proveedor on Factura.ID_Proveedor = Proveedor.ID_proveedor where nombreProveedor like '%" + args + "%'";
                 SqlDataAdapter da = new SqlDataAdapter(consulta, conexion);

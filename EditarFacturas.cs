@@ -6,7 +6,7 @@ namespace CedisurB
 {
     public partial class EditarFacturas : Form
     {
-        private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS ; database=cedisur ; integrated security = true");
+        private readonly SqlConnection conexion = new SqlConnection("server=SERVERDES ; database=cedisur ; integrated security = true");
         readonly VerFacturas factura = new VerFacturas();
 
         public new Form ParentForm;

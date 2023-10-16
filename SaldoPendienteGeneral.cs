@@ -23,7 +23,7 @@ namespace CedisurB
         //Método para mostrar los saldos pendientes en el datagridview
         private DataTable MostrarSaldos()
         {
-            using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+            using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
             {
                 string consulta = "select Proveedor.nombreProveedor,numContrato, FacturaN, fechaFactura, diasVencimiento, importeMXP, importeUSD, abono, " +
                     "saldoMXP, saldoUSD, TipoDeCambio, Proveedor.EmpresaAsoc " +

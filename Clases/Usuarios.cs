@@ -21,7 +21,7 @@ namespace CedisurB.Clases
         public static DataTable MostrarUsuario()
         {
 
-            using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+            using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
             {
                 SqlDataAdapter da = new SqlDataAdapter("DT_MostrarUsuarios", conexion);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
@@ -36,7 +36,7 @@ namespace CedisurB.Clases
         public DataTable MostrarUsuariosNombre(string args)
         {
 
-            using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+            using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
             {
                 string consulta = "select * from Usuarios where NombreCompleto like '%" + args + "%'";
                 SqlDataAdapter da = new SqlDataAdapter(consulta, conexion);

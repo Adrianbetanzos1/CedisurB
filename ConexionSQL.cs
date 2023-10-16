@@ -15,7 +15,7 @@ namespace CedisurB
         
         public ConexionSQL()
         {
-            conexionSql = "Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true";
+            conexionSql = "Server=SERVERDES; Database=Cedisur;  integrated security= true";
         }
 
 

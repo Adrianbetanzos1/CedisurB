@@ -1,17 +1,9 @@
 ﻿using CedisurB.Clases;
 using CedisurB.Reportes;
-using Microsoft.Reporting.WinForms;
-using Microsoft.ReportingServices.Diagnostics.Internal;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CedisurB
@@ -19,8 +11,8 @@ namespace CedisurB
     public partial class VerFacturas : Form
     {
 
-        private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS ; database=cedisur ; integrated security = true");
-
+        private readonly SqlConnection conexion = new SqlConnection("server=SERVERDES ; database=Cedisur ; integrated security = true");
+        DataTable datosInforme = new DataTable();
 
         readonly DataTable dt = new DataTable();
         //private readonly int pageSize = 15; // Número de registros a cargar por página
@@ -31,7 +23,7 @@ namespace CedisurB
         private DataTable MostrarFactura()
         {
 
-            using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+            using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
             {
                 SqlDataAdapter da = new SqlDataAdapter("DT_MostrarFacturasB", conexion);
 
@@ -221,7 +213,7 @@ namespace CedisurB
         
         //BOTON FILTRADO, que genera un reporte 
 
-        DataTable datosInforme = new DataTable();
+       
         private void Button1_Click(object sender, EventArgs e)
         {
             if (DGVfacturas.RowCount == 0)
@@ -372,7 +364,10 @@ namespace CedisurB
             }
         }
 
-      
+        private void DGVfacturas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     
 }

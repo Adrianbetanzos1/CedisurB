@@ -10,7 +10,7 @@ namespace CedisurB
     public partial class VerProveedores : Form
     {
 
-        private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS ; database=cedisur ; integrated security = true");
+        private readonly SqlConnection conexion = new SqlConnection("server=SERVERDES ; database=cedisur ; integrated security = true");
 
         private SqlConnection connection;
         private SqlDataAdapter adapter;
@@ -40,7 +40,7 @@ namespace CedisurB
         {
             RestringirAccesos();
 
-            string connectionString = "Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true";
+            string connectionString = "Server=SERVERDES; Database=Cedisur;  integrated security= true";
             connection = new SqlConnection(connectionString);
 
             // Crea un adaptador de datos y llena un DataTable

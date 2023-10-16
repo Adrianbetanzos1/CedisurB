@@ -32,7 +32,7 @@ namespace CedisurB
 
         private bool ExisteIDEnBaseDeDatos(string id)
         {
-            string connectionString = "Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"; 
+            string connectionString = "Server=SERVERDES; Database=Cedisur;  integrated security= true"; 
             string query = "SELECT COUNT(*) FROM Proveedor WHERE ID_proveedor = @ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -73,7 +73,7 @@ namespace CedisurB
             }
             else if (MessageBox.Show("Estas seguro que deseas agregar este nuevo proveedor?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+                using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
                 {
                     //Se inicializa el sqlCommand
                     SqlCommand cmd = new SqlCommand("Insert into Proveedor(ID_proveedor,RfcProveedor, nombreProveedor, fechaDeRegistro, TipoDeProveedor, TipoDePago, EmpresaAsoc) values (@id_proveedor,@RfcProveedor, @nombreProveedor, @fechaDeRegistro, @TipoDeProveedor, @TipoDePago,@empresaAsoc)")

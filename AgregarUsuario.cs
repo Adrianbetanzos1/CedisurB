@@ -97,7 +97,7 @@ namespace CedisurB
             }
             else if (MessageBox.Show("Estas seguro que deseas agregar este nuevo usuario?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
+                using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
                 {
                     SqlCommand cmd = new SqlCommand("Insert into Usuarios(NombreCompleto, NombreUsuario, Contraseña, Nivel_seguridad,Email) values (@nombreCompleto, @nombreUsuario, @Contraseña, @nivelSeguridad,@Email)")
                     {
