@@ -97,7 +97,7 @@ namespace CedisurB
             }
             else if (MessageBox.Show("Estas seguro que deseas agregar este nuevo usuario?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
+                using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated security=true"))
                 {
                     SqlCommand cmd = new SqlCommand("Insert into Usuarios(NombreCompleto, NombreUsuario, Contraseña, Nivel_seguridad,Email) values (@nombreCompleto, @nombreUsuario, @Contraseña, @nivelSeguridad,@Email)")
                     {
@@ -125,6 +125,11 @@ namespace CedisurB
         private void PictureBox3_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void AgregarUsuario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

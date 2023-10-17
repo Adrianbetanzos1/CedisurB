@@ -26,7 +26,8 @@ namespace CedisurB.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SERVERDES;Initial Catalog=Cedisur;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated securi" +
+            "ty=true;")]
         public string cn {
             get {
                 return ((string)(this["cn"]));

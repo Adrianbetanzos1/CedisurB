@@ -14,7 +14,7 @@ namespace CedisurB
     public partial class EditarUsuarios : Form
     {
 
-        private readonly SqlConnection conexion = new SqlConnection("server=SERVERDES ; database=cedisur ; integrated security = true");
+        private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS; database=cedisur ; integrated security = true");
 
         //Definimos este formulario como hijo del ver usuarios
         readonly VerUsuarios usuarios = new VerUsuarios();

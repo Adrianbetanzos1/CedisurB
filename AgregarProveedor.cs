@@ -32,7 +32,7 @@ namespace CedisurB
 
         private bool ExisteIDEnBaseDeDatos(string id)
         {
-            string connectionString = "Server=SERVERDES; Database=Cedisur;  integrated security= true"; 
+            string connectionString = "Server=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated security=true"; 
             string query = "SELECT COUNT(*) FROM Proveedor WHERE ID_proveedor = @ID";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -66,14 +66,19 @@ namespace CedisurB
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             string nuevoID = TxtIDProveedor.Text;
+            if (!float.TryParse(TxtIDProveedor.Text, out float _))
+            {
+                MessageBox.Show("Ingrese un valor númerico en el ID");
+                TxtIDProveedor.Focus();
+            }
 
-            if (string.IsNullOrEmpty(TxtIDProveedor.Text) || string.IsNullOrEmpty(TxtNombreProv.Text) || string.IsNullOrEmpty(TxtRfc.Text) || CbTipo.CheckedItems.Count == 0 || CbMoneda.CheckedItems.Count == 0 || CLBEmpresa.CheckedItems.Count == 0)
+            else if (string.IsNullOrEmpty(TxtIDProveedor.Text) || string.IsNullOrEmpty(TxtNombreProv.Text) || string.IsNullOrEmpty(TxtRfc.Text) || CbTipo.CheckedItems.Count == 0 || CbMoneda.CheckedItems.Count == 0 || CLBEmpresa.CheckedItems.Count == 0)
             {
                 MessageBox.Show("Colocar los datos faltantes antes de continuar");
             }
             else if (MessageBox.Show("Estas seguro que deseas agregar este nuevo proveedor?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
+                using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated security=true"))
                 {
                     //Se inicializa el sqlCommand
                     SqlCommand cmd = new SqlCommand("Insert into Proveedor(ID_proveedor,RfcProveedor, nombreProveedor, fechaDeRegistro, TipoDeProveedor, TipoDePago, EmpresaAsoc) values (@id_proveedor,@RfcProveedor, @nombreProveedor, @fechaDeRegistro, @TipoDeProveedor, @TipoDePago,@empresaAsoc)")
@@ -123,11 +128,7 @@ namespace CedisurB
         //Valida que sea un valor númerico el que se está poniendo
         private void TxtIDProveedor_Leave(object sender, EventArgs e)
         {
-            if (!float.TryParse(TxtIDProveedor.Text, out float _))
-            {
-                MessageBox.Show("Ingrese un valor númerico");
-                TxtIDProveedor.Focus();
-            }
+           
         }
 
         private void PictureBox3_Click(object sender, EventArgs e)

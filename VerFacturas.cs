@@ -23,7 +23,7 @@ namespace CedisurB
         private DataTable MostrarFactura()
         {
 
-            using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
+            using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS; Database=Cedisur;  integrated security= true"))
             {
                 SqlDataAdapter da = new SqlDataAdapter("DT_MostrarFacturasB", conexion);
 

@@ -6,7 +6,7 @@ namespace CedisurB
 {
     public partial class EditarFacturas : Form
     {
-        private readonly SqlConnection conexion = new SqlConnection("server=SERVERDES ; database=cedisur ; integrated security = true");
+        private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated security=true");
         readonly VerFacturas factura = new VerFacturas();
 
         public new Form ParentForm;
@@ -163,6 +163,11 @@ namespace CedisurB
         private void PictureBox3_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void EditarFacturas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

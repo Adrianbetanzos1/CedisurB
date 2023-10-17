@@ -14,7 +14,7 @@ namespace CedisurB
     public partial class EditarProveedores : Form
     {
 
-        private readonly SqlConnection conexion = new SqlConnection("server=SERVERDES ; database=cedisur ; integrated security = true");
+        private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS;database=Cedisur; Integrated security=true");
 
         //Definimos este formulario como hijo del ver proveedores
         readonly VerProveedores prov = new VerProveedores();

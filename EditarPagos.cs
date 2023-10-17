@@ -15,7 +15,7 @@ namespace CedisurB
     public partial class EditarPagos : Form
     {
 
-        private readonly string conexion = "server=SERVERDES; database=cedisur ; integrated security = true";
+        private readonly string conexion = "server=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated security=true";
 
         readonly VerPagos pagos = new VerPagos();
         public new Form ParentForm;

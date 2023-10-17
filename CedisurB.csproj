@@ -504,9 +504,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
-    <Content Include="Images\befo.png" />
-    <Content Include="Images\next.png" />
-    <Content Include="Images\user.png" />
     <Content Include="Resources\pexels-henry-&amp;-co-2662792.jpg" />
     <Content Include="Resources\user.png" />
     <Content Include="SqlServerTypes\readme.htm" />
@@ -537,6 +534,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

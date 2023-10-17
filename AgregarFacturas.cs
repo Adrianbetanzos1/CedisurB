@@ -74,7 +74,7 @@ namespace CedisurB
             else if (MessageBox.Show("Estas seguro que deseas agregar esta factura? ", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
 
-                using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
+                using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated security=true"))
                 {
                     SqlCommand cmd = new SqlCommand("Insert into Factura(facturaN, fechaFactura, diasVencimiento, importeMXP,importeUSD, abono, saldoMXP, saldoUSD,numContrato, ID_proveedor, TipoDeCambio, SaldoAnterior, SaldoAnteriorUSD,AbonoAnterior) values (@facturaN, @fechaFactura, @diasVencimiento, @importe,@importeUSD, @abono, @saldoMXP, @saldoUSD, @numContrato, @ID_proveedor,@TipoDeCambio, @saldoAnterior, @saldoAnteriorUSD, @abonoAnterior)")
                     {
@@ -99,7 +99,7 @@ namespace CedisurB
                     cmd.Parameters.AddWithValue("@abonoAnterior", float.Parse(TxtAbono.Text).ToString("F2"));
 
                     string idAVerificar = TxtNombreFactura.Text;
-                    string conection = "Server=SERVERDES; Database = Cedisur; integrated security = true";
+                    string conection = "Server=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated security=true";
                     if (ExisteIDEnBaseDeDatos(conection, idAVerificar))
                     {
                         MessageBox.Show("Ya existe ese nombre de factura y no se puede repetir");

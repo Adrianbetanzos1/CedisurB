@@ -14,7 +14,7 @@ namespace CedisurB
 {
     public partial class AgregarPagos : Form
     {
-        private readonly string conexion = "server=SERVERDES ; database=cedisur ; integrated security = true";
+        private readonly string conexion = "server=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated security=true";
         public new Form ParentForm;
         public AgregarPagos()
         {
@@ -212,7 +212,7 @@ namespace CedisurB
             else if (MessageBox.Show("Estas seguro que deseas aplicar este pago?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
 
-                using (SqlConnection conexion = new SqlConnection("Server=SERVERDES; Database=Cedisur;  integrated security= true"))
+                using (SqlConnection conexion = new SqlConnection("Server=DESKTOP-717JV41\\SQLEXPRESS;Initial Catalog=Cedisur; Integrated security=true"))
                 {
                     SqlCommand cmd = new SqlCommand("Insert into Pagos(facturaN,importePagoMXP,importePagoUSD, fechaPago, SPEI, numCuenta,ID_proveedor,TipoDeCambio) values (@facturaN,@importePagoMXP,@importePagoUSD,@fechaPago, @SPEI,@numCuenta,@ID_proveedor,@tipoDeCambio)")
                     {
