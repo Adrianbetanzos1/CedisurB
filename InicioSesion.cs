@@ -58,10 +58,10 @@ namespace CedisurB
                         userTxt.Focus();
                     }
                 }
-                else MsgError("Coloque su contraseña");
+                else MsgError("Coloque bien su contraseña");
 
             }
-            else MsgError("Coloque su nombre de usuario");
+            else MsgError("Coloque bien su nombre de usuario");
         }
 
         private void CerrarSesion(object sender, FormClosedEventArgs e)
