@@ -243,7 +243,7 @@
             // 
             // TxtAbono
             // 
-            this.TxtAbono.Location = new System.Drawing.Point(854, 372);
+            this.TxtAbono.Location = new System.Drawing.Point(844, 468);
             this.TxtAbono.Name = "TxtAbono";
             this.TxtAbono.Size = new System.Drawing.Size(333, 20);
             this.TxtAbono.TabIndex = 23;
@@ -255,7 +255,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(849, 344);
+            this.label8.Location = new System.Drawing.Point(839, 440);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(95, 25);
             this.label8.TabIndex = 22;
@@ -377,7 +377,7 @@
             // BtnAgregar
             // 
             this.BtnAgregar.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.Location = new System.Drawing.Point(854, 468);
+            this.BtnAgregar.Location = new System.Drawing.Point(854, 541);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(128, 52);
             this.BtnAgregar.TabIndex = 32;

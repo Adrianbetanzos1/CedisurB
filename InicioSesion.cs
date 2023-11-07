@@ -14,6 +14,7 @@ namespace CedisurB
 {
     public partial class InicioSesion : Form
     {
+      
         public InicioSesion()
         {
             InitializeComponent();

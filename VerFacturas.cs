@@ -11,7 +11,7 @@ namespace CedisurB
     public partial class VerFacturas : Form
     {
 
-        private readonly SqlConnection conexion = new SqlConnection("server=SERVERDES ; database=Cedisur ; integrated security = true");
+        private readonly SqlConnection conexion = new SqlConnection("server=DESKTOP-717JV41\\SQLEXPRESS ; database=Cedisur ; integrated security = true");
         DataTable datosInforme = new DataTable();
 
         readonly DataTable dt = new DataTable();

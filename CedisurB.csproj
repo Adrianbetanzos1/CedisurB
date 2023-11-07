@@ -207,9 +207,6 @@
     <Compile Include="EditarUsuarios.Designer.cs">
       <DependentUpon>EditarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Herramientas\ButtonA.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
